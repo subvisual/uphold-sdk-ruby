@@ -6,8 +6,8 @@ require 'bitreserve/version'
 Gem::Specification.new do |spec|
   spec.name          = "bitreserve"
   spec.version       = Bitreserve::VERSION
-  spec.authors       = ["Zamith"]
-  spec.email         = ["zamith@groupbuddies.com"]
+  spec.authors       = ["Group Buddies"]
+  spec.email         = ["zamith@groupbuddies.com", "mpalhas@groupbuddies.com"]
   spec.summary       = %q{A wrapper for the bitreserve API}
   spec.homepage      = "https://github.com/groupbuddies/bitreserve"
   spec.license       = "MIT"
