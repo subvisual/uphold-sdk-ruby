@@ -5,11 +5,10 @@ RuboCop::RakeTask.new
 RSpec::Core::RakeTask.new(:spec)
 
 task :console do
-  require 'irb'
-  require 'irb/completion'
+  require 'pry'
   require 'bitreserve'
   ARGV.clear
-  IRB.start
+  Pry.start
 end
 
 task default: [:rubocop, :spec]

@@ -1,7 +1,8 @@
 module Bitreserve
-  class Ticker
-    def self.all
-      Request.perform(:get, Endpoints::TICKER)
-    end
+  class Ticker < BaseEntity
+    include Bitreserve::Operations::All
+    include Bitreserve::Operations::MultiFind
+
+    attr_reader :ask, :bid, :currency, :pair
   end
 end

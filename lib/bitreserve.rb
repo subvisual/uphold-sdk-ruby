@@ -4,6 +4,9 @@ require 'httparty'
 
 require 'bitreserve/version'
 require 'bitreserve/endpoints'
+require 'bitreserve/operations/all'
+require 'bitreserve/operations/find'
+require 'bitreserve/operations/multi_find'
 
 module Bitreserve
   API_BASE = 'api.bitreserve.org'
@@ -19,5 +22,6 @@ module Bitreserve
   end
 end
 
+require 'bitreserve/base_entity'
 require 'bitreserve/request'
 require 'bitreserve/ticker'
