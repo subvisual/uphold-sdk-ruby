@@ -16,18 +16,18 @@ module Bitreserve
       private
 
       def cards_request_data(payload = nil)
-        Bitreserve::RequestData.new(
-          Bitreserve::Endpoints::CARD,
-          Bitreserve::Entities::Card,
+        RequestData.new(
+          Endpoints::CARD,
+          Entities::Card,
           authorization_header,
           payload
         )
       end
 
       def card_request_data(id)
-        Bitreserve::RequestData.new(
-          Bitreserve::Endpoints::CARD + "/#{id}",
-          Bitreserve::Entities::Card,
+        RequestData.new(
+          Endpoints::CARD + "/#{id}",
+          Entities::Card,
           authorization_header
         )
       end

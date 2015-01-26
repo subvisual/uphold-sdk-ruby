@@ -4,7 +4,7 @@ require 'bitreserve/api/card'
 
 module Bitreserve
   module API
-    include Bitreserve::API::Ticker
-    include Bitreserve::API::Card
+    include API::Ticker
+    include API::Card
   end
 end

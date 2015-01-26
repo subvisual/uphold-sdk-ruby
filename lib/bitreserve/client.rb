@@ -2,7 +2,7 @@ require 'bitreserve/api'
 
 module Bitreserve
   class Client
-    include Bitreserve::API
+    include API
     attr_reader :bearer_token
 
     def initialize(token: ENV['BITRESERVE_AUTH_TOKEN'])
