@@ -4,9 +4,8 @@ module Bitreserve
     base_uri "#{Bitreserve.api_base}/v#{Bitreserve.api_version}"
 
     def self.perform_with_objects(http_method, request_data)
-      new(request_data).public_send(http_method).map do |element|
-        request_data.entity.new(element)
-      end
+      response = new(request_data).public_send(http_method)
+      request_data.entity.from_collection(response)
     end
 
     def self.perform_with_object(http_method, request_data)

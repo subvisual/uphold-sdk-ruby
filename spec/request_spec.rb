@@ -2,7 +2,7 @@ require 'spec_helper'
 
 module Bitreserve
   shared_examples 'perform request method' do |method_name|
-    let(:object_class) { double('ObjectClass', new: nil) }
+    let(:object_class) { double('ObjectClass', new: nil, from_collection: nil) }
     let(:request) { spy('request') }
     let(:client) { Bitreserve::Client.new }
 
