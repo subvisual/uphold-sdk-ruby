@@ -5,6 +5,7 @@ end
 
 require 'bitreserve'
 require 'climate_control'
+require 'pry'
 
 Dir[File.join(Bitreserve::ROOT_PATH, '..', 'spec/support/**/*.rb')].each { |f| require f }
 

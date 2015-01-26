@@ -3,21 +3,21 @@ module Bitreserve
     include ::HTTParty
     base_uri "#{Bitreserve.api_base}/v#{Bitreserve.api_version}"
 
-    def self.perform_with_objects(http_method, path, klass, client)
-      new(path, client).public_send(http_method).map do |element|
-        klass.new(element)
+    def self.perform_with_objects(http_method, request_data)
+      new(request_data).public_send(http_method).map do |element|
+        request_data.entity.new(element)
       end
     end
 
-    def self.perform_with_object(http_method, path, klass, client)
-      response = new(path, client).public_send(http_method)
-      klass.new(response)
+    def self.perform_with_object(http_method, request_data)
+      response = new(request_data).public_send(http_method)
+      request_data.entity.new(response)
     end
 
-    def initialize(path, client)
-      @path = path
-      @client = client
-      add_headers
+    def initialize(request_data)
+      @path = request_data.endpoint
+      @data = request_data.payload
+      Request.headers request_data.headers
     end
 
     def get
@@ -27,27 +27,17 @@ module Bitreserve
     end
 
     def post
-      response = Request.post(path)
+      response = Request.post(path, body: data)
       log_request_info(:post, response)
       response.parsed_response
     end
 
     private
 
-    attr_reader :path, :client
-
-    def add_headers
-      return unless client.bearer_token?
-
-      Request.headers 'Authorization' => "Bearer #{client.bearer_token}"
-    end
+    attr_reader :path, :data, :client
 
     def log_request_info(http_method, response)
-      Bitreserve.logger.info "[Bitreserve] [#{current_time}] #{http_method.to_s.upcase} #{Request.base_uri}#{path} #{Request.headers} #{response.code}"
-    end
-
-    def current_time
-      Time.now.utc.strftime('%d/%b/%Y %H:%M:%S %Z')
+      Bitreserve.logger.info "[Bitreserve] #{http_method.to_s.upcase} #{Request.base_uri}#{path} #{Request.headers} #{response.code}"
     end
   end
 end

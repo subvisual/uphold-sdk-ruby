@@ -2,19 +2,21 @@ module Bitreserve
   module API
     module Ticker
       def all_tickers
-        Request.perform_with_objects(:get,
+        request_data = Bitreserve::RequestData.new(
           Bitreserve::Endpoints::TICKER,
           Bitreserve::Entities::Ticker,
-          self
+          authorization_header
         )
+        Request.perform_with_objects(:get, request_data)
       end
 
       def find_ticker(currency: nil)
-        Request.perform_with_objects(:get,
+        request_data = Bitreserve::RequestData.new(
           Bitreserve::Endpoints::TICKER + "/#{currency}",
           Bitreserve::Entities::Ticker,
-          self
+          authorization_header
         )
+        Request.perform_with_objects(:get, request_data)
       end
     end
   end

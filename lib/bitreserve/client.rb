@@ -12,5 +12,11 @@ module Bitreserve
     def bearer_token?
       !bearer_token.nil?
     end
+
+    def authorization_header
+      return {} unless bearer_token?
+
+      { 'Authorization' => "Bearer #{bearer_token}" }
+    end
   end
 end

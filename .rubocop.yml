@@ -27,5 +27,8 @@ Style/DotPosition:
 Style/IfUnlessModifier:
   Enabled: false
 
+Style/MultilineOperationIndentation:
+  EnforcedStyle: indented
+
 Style/RegexpLiteral:
   MaxSlashes: 0

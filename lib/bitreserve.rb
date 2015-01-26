@@ -20,6 +20,7 @@ module Bitreserve
 end
 
 require 'bitreserve/request'
+require 'bitreserve/request_data'
 require 'bitreserve/entities/base_entity'
 require 'bitreserve/entities/ticker'
 require 'bitreserve/entities/card'
