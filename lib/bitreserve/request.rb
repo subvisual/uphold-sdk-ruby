@@ -16,24 +16,44 @@ module Bitreserve
     def initialize(request_data)
       @path = request_data.endpoint
       @data = request_data.payload
+      @auth = request_data.auth
       Request.headers request_data.headers
+      base_uri_for_auth
     end
 
     def get
-      response = Request.get(path)
+      response = Request.get(path, options)
       log_request_info(:get, response)
       response.parsed_response
     end
 
     def post
-      response = Request.post(path, body: data)
+      response = Request.post(path, options)
       log_request_info(:post, response)
       response.parsed_response
     end
 
     private
 
-    attr_reader :path, :data, :client
+    attr_reader :path, :data, :auth
+
+    def base_uri_for_auth
+      return unless auth
+
+      Request.base_uri "#{Bitreserve.api_base}"
+    end
+
+    def options
+      options = {}
+      if auth
+        options.merge!(basic_auth: auth)
+      end
+
+      if data
+        options.merge!(body: data)
+      end
+      options
+    end
 
     def log_request_info(http_method, response)
       Bitreserve.logger.info "[Bitreserve] #{http_method.to_s.upcase} #{Request.base_uri}#{path} #{Request.headers} #{response.code}"

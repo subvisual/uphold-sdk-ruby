@@ -3,11 +3,11 @@ require 'spec_helper'
 module Bitreserve
   module API
     describe Card do
-      let(:client) { Bitreserve::Client.new }
+      let(:client) { Client.new }
 
       context '#all_cards' do
         it 'gets all the cards' do
-          request_data = Bitreserve::RequestData.new(Endpoints::CARD, Bitreserve::Entities::Card, client.authorization_header)
+          request_data = RequestData.new(Endpoints::CARD, Entities::Card, client.authorization_header)
           allow(Request).to receive(:perform_with_objects)
 
           client.all_cards
@@ -20,7 +20,7 @@ module Bitreserve
       context '#find_card' do
         it 'gets a specific card' do
           id = '1234'
-          request_data = Bitreserve::RequestData.new(Endpoints::CARD + "/#{id}", Bitreserve::Entities::Card, client.authorization_header)
+          request_data = RequestData.new(Endpoints::CARD + "/#{id}", Entities::Card, client.authorization_header)
           allow(Request).to receive(:perform_with_object)
 
           client.find_card(id: id)
@@ -33,7 +33,7 @@ module Bitreserve
       context '#create_card' do
         it 'creates a card' do
           data = { label: 'New card', currency: 'EUR' }
-          request_data = Bitreserve::RequestData.new(Endpoints::CARD, Bitreserve::Entities::Card, client.authorization_header, data)
+          request_data = RequestData.new(Endpoints::CARD, Entities::Card, client.authorization_header, data)
           allow(Request).to receive(:perform_with_object)
 
           client.create_card(data)
