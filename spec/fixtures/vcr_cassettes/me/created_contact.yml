@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.bitreserve.org/v0/me/contacts
+    body:
+      encoding: UTF-8
+      string: firstName=first-name&lastName=last-name&emails[]=fake%40email.com&company=company-name
+    headers:
+      Authorization:
+      - Bearer <BITRESERVE_AUTH_TOKEN>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Tue, 27 Jan 2015 17:05:39 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '191'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d872e6b02659cad8e480ae5aeac6d04ad1422378339; expires=Wed, 27-Jan-16
+        17:05:39 GMT; path=/; domain=.bitreserve.org; HttpOnly
+      X-Content-Security-Policy:
+      - default-src "none"
+      Content-Security-Policy:
+      - default-src "none"
+      X-Webkit-Csp:
+      - default-src "none"
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Bitreserve-Request-Id:
+      - 8862a788-7e9b-4553-b816-41cfaecf515a
+      X-Ratelimit-Limit:
+      - '300'
+      X-Ratelimit-Remaining:
+      - '299'
+      X-Ratelimit-Reset:
+      - '1422378639'
+      Cf-Ray:
+      - 1af6894bf6100ded-MAD
+    body:
+      encoding: UTF-8
+      string: '{"id":"6a223e0d-8345-4153-9cc9-298ab5cab048","firstName":"first-name","lastName":"last-name","company":"company-name","emails":["fake@email.com"],"addresses":[],"name":"first-name
+        last-name"}'
+    http_version: 
+  recorded_at: Tue, 27 Jan 2015 17:05:39 GMT
+recorded_with: VCR 2.9.3

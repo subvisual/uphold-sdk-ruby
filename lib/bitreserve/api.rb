@@ -4,6 +4,7 @@ require 'bitreserve/api/card'
 require 'bitreserve/api/user'
 require 'bitreserve/api/transaction'
 require 'bitreserve/api/auth_token'
+require 'bitreserve/api/contact'
 
 module Bitreserve
   module API
@@ -12,5 +13,6 @@ module Bitreserve
     include API::User
     include API::Transaction
     include API::AuthToken
+    include API::Contact
   end
 end

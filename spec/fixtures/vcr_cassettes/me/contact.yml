@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.bitreserve.org/v0/me/contacts/6a0fc9d7-605b-43a3-8675-f1188ab2e005
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <BITRESERVE_AUTH_TOKEN>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Tue, 27 Jan 2015 16:41:56 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '167'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d9f24e313812b27fdf5f37800f659dab41422376915; expires=Wed, 27-Jan-16
+        16:41:55 GMT; path=/; domain=.bitreserve.org; HttpOnly
+      X-Content-Security-Policy:
+      - default-src "none"
+      Content-Security-Policy:
+      - default-src "none"
+      X-Webkit-Csp:
+      - default-src "none"
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Bitreserve-Request-Id:
+      - d3df9134-d3bc-47b3-b1ea-11e17d87fe32
+      X-Ratelimit-Limit:
+      - '300'
+      X-Ratelimit-Remaining:
+      - '297'
+      X-Ratelimit-Reset:
+      - '1422377193'
+      Cf-Ray:
+      - 1af66689f1b80ded-MAD
+    body:
+      encoding: UTF-8
+      string: '{"id":"6a0fc9d7-605b-43a3-8675-f1188ab2e005","firstName":null,"lastName":null,"company":"Group
+        Buddies","emails":["mpalhas@groupbuddies.com"],"addresses":[],"name":""}'
+    http_version: 
+  recorded_at: Tue, 27 Jan 2015 16:41:56 GMT
+recorded_with: VCR 2.9.3

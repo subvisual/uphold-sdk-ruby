@@ -20,7 +20,7 @@ module Bitreserve
       end
 
       def instance_variable_name(key)
-        underscored_key = key.to_s.gsub(/([a-z\d])([A-Z])/, '\1_\2').downcase
+        underscored_key = Bitreserve::Helpers.underscored_key(key)
         "@#{underscored_key}"
       end
     end

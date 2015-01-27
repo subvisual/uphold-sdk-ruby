@@ -19,6 +19,7 @@ module Bitreserve
   end
 end
 
+require 'bitreserve/helpers'
 require 'bitreserve/request'
 require 'bitreserve/request_data'
 require 'bitreserve/entities/base_entity'
@@ -28,3 +29,4 @@ require 'bitreserve/entities/user'
 require 'bitreserve/entities/phone'
 require 'bitreserve/entities/transaction'
 require 'bitreserve/entities/auth_token'
+require 'bitreserve/entities/contact'
