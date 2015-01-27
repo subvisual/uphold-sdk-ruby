@@ -16,6 +16,17 @@ module Bitreserve
           expect(entity.instance_variable_get(:@some_key)).to eq 'value'
         end
       end
+
+      context '.from_collection' do
+        it 'instantiates each of the entities passed in' do
+          entity = double('Entity')
+          allow(BaseEntity).to receive(:new)
+
+          BaseEntity.from_collection([entity])
+
+          expect(BaseEntity).to have_received(:new).with(entity)
+        end
+      end
     end
   end
 end

@@ -12,7 +12,7 @@ module Bitreserve
       end
 
       def transactions
-        @_transactions ||= Entities::Transaction.from_collection(@transaction)
+        @_transactions ||= Entities::Transaction.from_collection(@transactions)
       end
     end
   end
