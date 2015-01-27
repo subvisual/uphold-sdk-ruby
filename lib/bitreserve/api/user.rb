@@ -2,17 +2,21 @@ module Bitreserve
   module API
     module User
       def me
-        Request.perform_with_object(:get,
+        request_data = RequestData.new(
           Endpoints::USER,
           Entities::User,
-          self)
+          authorization_header
+        )
+        Request.perform_with_object(:get, request_data)
       end
 
       def phones
-        Request.perform_with_objects(:get,
+        request_data = RequestData.new(
           Endpoints::USER_PHONES,
           Entities::Phone,
-          self)
+          authorization_header
+        )
+        Request.perform_with_objects(:get, request_data)
       end
     end
   end
