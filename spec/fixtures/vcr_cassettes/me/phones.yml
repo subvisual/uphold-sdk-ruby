@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.bitreserve.org/v0/me/phones
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <BITRESERVE_AUTH_TOKEN>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Tue, 27 Jan 2015 14:02:27 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '183'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=de6483e85a5f2cc494b822c9956f7490b1422367347; expires=Wed, 27-Jan-16
+        14:02:27 GMT; path=/; domain=.bitreserve.org; HttpOnly
+      X-Content-Security-Policy:
+      - default-src "none"
+      Content-Security-Policy:
+      - default-src "none"
+      X-Webkit-Csp:
+      - default-src "none"
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Bitreserve-Request-Id:
+      - b2d98db4-a2f6-4a4b-9e23-f6db41e7bc22
+      X-Ratelimit-Limit:
+      - '300'
+      X-Ratelimit-Remaining:
+      - '297'
+      X-Ratelimit-Reset:
+      - '1422367553'
+      Cf-Ray:
+      - 1af57cefe53f0ded-MAD
+    body:
+      encoding: UTF-8
+      string: '[{"id":"ecd5d5fa-dc92-4bb9-994a-1aca75dbb173","verified":"true","primary":"true","e164Masked":"+XXXXXXXXXX49","nationalMasked":"XXX
+        XXX X49","internationalMasked":"+XXX XXX XXX X49"}]'
+    http_version: 
+  recorded_at: Tue, 27 Jan 2015 14:02:27 GMT
+recorded_with: VCR 2.9.3

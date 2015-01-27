@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.bitreserve.org/v0/me/cards
+    body:
+      encoding: UTF-8
+      string: label=New%20card&currency=EUR
+    headers:
+      Authorization:
+      - Bearer <BITRESERVE_AUTH_TOKEN>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Tue, 27 Jan 2015 14:23:48 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '292'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d5a964a17a821406ad532e22554362ae01422368627; expires=Wed, 27-Jan-16
+        14:23:47 GMT; path=/; domain=.bitreserve.org; HttpOnly
+      X-Content-Security-Policy:
+      - default-src "none"
+      Content-Security-Policy:
+      - default-src "none"
+      X-Webkit-Csp:
+      - default-src "none"
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Bitreserve-Request-Id:
+      - fcb84723-e476-46aa-a1b3-41b70286f5e9
+      X-Ratelimit-Limit:
+      - '300'
+      X-Ratelimit-Remaining:
+      - '297'
+      X-Ratelimit-Reset:
+      - '1422368769'
+      Cf-Ray:
+      - 1af59c34d1bf0db7-MAD
+    body:
+      encoding: UTF-8
+      string: '{"id":"2249bb71-e255-4b00-a1bc-a0fcc869aa0a","address":{"bitcoin":"1KKEyb2fs5oeGKaycoa7EJRB9dWNUh2zu7"},"label":"New
+        card","currency":"EUR","balance":"0.00","available":"0.00","lastTransactionAt":null,"position":8,"addresses":[{"id":"1KKEyb2fs5oeGKaycoa7EJRB9dWNUh2zu7","network":"bitcoin"}]}'
+    http_version: 
+  recorded_at: Tue, 27 Jan 2015 14:23:48 GMT
+recorded_with: VCR 2.9.3

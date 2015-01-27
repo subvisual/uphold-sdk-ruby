@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.bitreserve.org/v0/reserve/transactions
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <BITRESERVE_AUTH_TOKEN>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Tue, 27 Jan 2015 14:00:59 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '8185851'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dc1bebcfd7edbf1910d2b0ae3b09dada91422367254; expires=Wed, 27-Jan-16
+        14:00:54 GMT; path=/; domain=.bitreserve.org; HttpOnly
+      X-Content-Security-Policy:
+      - default-src "none"
+      Content-Security-Policy:
+      - default-src "none"
+      X-Webkit-Csp:
+      - default-src "none"
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Bitreserve-Request-Id:
+      - 5f2d0bc0-fc9c-4fd5-b74b-a266c29c8e06
+      X-Ratelimit-Limit:
+      - '300'
+      X-Ratelimit-Remaining:
+      - '298'
+      X-Ratelimit-Reset:
+      - '1422367553'
+      Cf-Ray:
+      - 1af57aaa32a20db7-MAD
+    body:
+      encoding: UTF-8
+      string: '[{"id":"7a61a358-cced-4dc2-975f-dff3a6ec4c42","type":"withdrawal","params":{"currency":"USD","margin":"0.45","pair":"BTCUSD","rate":"265.27500","txid":"3014afd3b86eb5c7dd12fdfe2f37f2565c9075c8d79b80c03c7343d254405191"},"denomination":{"amount":"9.00","currency":"USD"},"origin":{"amount":"9.00","base":"9.00","commission":"0.00","currency":"USD","fee":"0.00","rate":"265.27500","sources":[{"id":"46d9dcf9-877b-47fd-b562-43936504adea","amount":"9.00"}]},"destination":{"address":"1snowqQP5VmZgU47i5AWwz9fsgHQg94Fa","amount":"0.03367437","base":"0.03392705","commission":"0.00015268","currency":"BTC","fee":"0.0001","rate":"0.00376967"},"status":"completed","quotedAt":"2015-01-27T13:54:43.000Z","createdAt":"2015-01-27T13:54:52.753Z"},{"id":"507bd05d-c1b1-4f61-bfc7-7f82a87c1240","type":"transfer","params":{"currency":"USD","margin":"0.45","pair":"BTCUSD","rate":"264.56500","txid":"95c074d007f129fae7e487fdac92aeb96c9336f35af05212708204c63152d77c"},"denomination":{"amount":"0.36757375","currency":"BTC"},"origin":{"amount":"0.36757375","base":"0.36757375","commission":"0.00","currency":"BTC","fee":"0.00","rate":"0.00378","sources":[{"id":"9aa2b6b3-2a4d-4913-998d-bfc913ea532a","amount":"0.17255358"},{"id":"45ff4cc6-86b5-4440-902f-9be5f26b5bed","amount":"0.19502017"}]},"destination":{"amount":"96.80","base":"97.24","commission":"0.44","currency":"USD","fee":"0.00","rate":"264.56500"},"status":"completed","quotedAt":"2015-01-27T13:52:02.384Z","createdAt":"2015-01-27T13:52:22.472Z"}]'
+    http_version: 
+  recorded_at: Tue, 27 Jan 2015 14:01:03 GMT
+recorded_with: VCR 2.9.3

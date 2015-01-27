@@ -1,0 +1,67 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.bitreserve.org/v0/me/cards
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <BITRESERVE_AUTH_TOKEN>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Tue, 27 Jan 2015 14:13:03 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '2098'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=df0760f1660ae5cc237b20d2b9f91ad061422367982; expires=Wed, 27-Jan-16
+        14:13:02 GMT; path=/; domain=.bitreserve.org; HttpOnly
+      X-Content-Security-Policy:
+      - default-src "none"
+      Content-Security-Policy:
+      - default-src "none"
+      X-Webkit-Csp:
+      - default-src "none"
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Bitreserve-Request-Id:
+      - 9a40e5ab-ad6e-4865-aeda-e84bee568191
+      X-Ratelimit-Limit:
+      - '300'
+      X-Ratelimit-Remaining:
+      - '299'
+      X-Ratelimit-Reset:
+      - '1422368282'
+      Cf-Ray:
+      - 1af58c71cb8c0ded-MAD
+    body:
+      encoding: UTF-8
+      string: '[{"id":"2daa59e8-89c5-4cbe-99fc-f66435024bcf","address":{"bitcoin":"1LbHhVFjLeC3hVhW4FXrwu7MNUCkoGTwA5"},"label":"XAU
+        card","currency":"XAU","balance":"0.001","available":"0.001","lastTransactionAt":"2014-12-02T00:29:45.507Z","position":7,"addresses":[{"id":"1LbHhVFjLeC3hVhW4FXrwu7MNUCkoGTwA5","network":"bitcoin"}]},{"id":"8a77ed0e-d89b-4d73-b438-33cd47dcafef","address":{"bitcoin":"1GXDSRdmEyLbgvGa3zBtW1Pftggc8Y8FWK"},"label":"BTC
+        card","currency":"BTC","balance":"0.00","available":"0.00","lastTransactionAt":null,"position":1,"addresses":[{"id":"1GXDSRdmEyLbgvGa3zBtW1Pftggc8Y8FWK","network":"bitcoin"}]},{"id":"d9cfb5ec-27b3-427a-8ee6-084a7c6b5d2a","address":{"bitcoin":"1JbnsnxESsu1bV3DV4DPCSNp15JQ6yCPgC"},"label":"USD
+        card","currency":"USD","balance":"0.00","available":"0.00","lastTransactionAt":null,"position":2,"addresses":[{"id":"1JbnsnxESsu1bV3DV4DPCSNp15JQ6yCPgC","network":"bitcoin"}]},{"id":"7faab8e0-fbb7-4bb4-ad2f-9e0e05eabc35","address":{"bitcoin":"1BsvBJnjXGPC68mPPmcsvUYzidGSXgJd7Q"},"label":"GBP
+        card","currency":"GBP","balance":"0.00","available":"0.00","lastTransactionAt":null,"position":4,"addresses":[{"id":"1BsvBJnjXGPC68mPPmcsvUYzidGSXgJd7Q","network":"bitcoin"}]},{"id":"1f3e8557-5a42-4cf9-a3fd-919b614b87f5","address":{"bitcoin":"19xscksV9K5tG3PQEkKfNWjaxSu8gzX1pi"},"label":"CNY
+        card","currency":"CNY","balance":"0.00","available":"0.00","lastTransactionAt":null,"position":5,"addresses":[{"id":"19xscksV9K5tG3PQEkKfNWjaxSu8gzX1pi","network":"bitcoin"}]},{"id":"353cc6d4-b19f-42ec-a733-bbaf45cb0089","address":{"bitcoin":"192R94xg5acCAYJqXYWve4L6WEaEEMU3RY"},"label":"JPY
+        card","currency":"JPY","balance":"0.00","available":"0.00","lastTransactionAt":null,"position":6,"addresses":[{"id":"192R94xg5acCAYJqXYWve4L6WEaEEMU3RY","network":"bitcoin"}]},{"id":"21a6f110-a684-4627-afda-bf03eca733cf","address":{"bitcoin":"1M8JNAoPxKfQivX8rzo3x1qKX6tf857HGf"},"label":"EUR
+        card","currency":"EUR","balance":"5.85","available":"5.85","lastTransactionAt":"2014-11-21T17:37:04.769Z","position":3,"addresses":[{"id":"1M8JNAoPxKfQivX8rzo3x1qKX6tf857HGf","network":"bitcoin"}]}]'
+    http_version: 
+  recorded_at: Tue, 27 Jan 2015 14:13:03 GMT
+recorded_with: VCR 2.9.3

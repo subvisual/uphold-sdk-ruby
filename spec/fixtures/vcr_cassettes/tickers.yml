@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.bitreserve.org/v0/ticker
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <BITRESERVE_AUTH_TOKEN>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Tue, 27 Jan 2015 14:26:56 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '1179'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d1a4a89e349c2808238a3de2f9cf953641422368815; expires=Wed, 27-Jan-16
+        14:26:55 GMT; path=/; domain=.bitreserve.org; HttpOnly
+      X-Content-Security-Policy:
+      - default-src "none"
+      Content-Security-Policy:
+      - default-src "none"
+      X-Webkit-Csp:
+      - default-src "none"
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Bitreserve-Request-Id:
+      - 6187b00e-29d9-4b5c-84ee-a00a6d1712e5
+      X-Ratelimit-Limit:
+      - '300'
+      X-Ratelimit-Remaining:
+      - '299'
+      X-Ratelimit-Reset:
+      - '1422369116'
+      Cf-Ray:
+      - 1af5a0cbfc090ded-MAD
+    body:
+      encoding: UTF-8
+      string: '[{"ask":"1","bid":"1","currency":"BTC","pair":"BTCBTC"},{"ask":"263.84","bid":"261.75","currency":"USD","pair":"BTCUSD"},{"ask":"1","bid":"1","currency":"CNY","pair":"CNYCNY"},{"ask":"7.0902","bid":"7.0869","currency":"CNY","pair":"EURCNY"},{"ask":"1","bid":"1","currency":"EUR","pair":"EUREUR"},{"ask":"0.7482","bid":"0.7478","currency":"GBP","pair":"EURGBP"},{"ask":"133.4504","bid":"133.3989","currency":"JPY","pair":"EURJPY"},{"ask":"1.1357","bid":"1.1353","currency":"USD","pair":"EURUSD"},{"ask":"9.4776","bid":"9.4759","currency":"CNY","pair":"GBPCNY"},{"ask":"1","bid":"1","currency":"GBP","pair":"GBPGBP"},{"ask":"178.3855","bid":"178.3677","currency":"JPY","pair":"GBPJPY"},{"ask":"1.5181","bid":"1.518","currency":"USD","pair":"GBPUSD"},{"ask":"0.0531","bid":"0.0531","currency":"CNY","pair":"JPYCNY"},{"ask":"1","bid":"1","currency":"JPY","pair":"JPYJPY"},{"ask":"6.243","bid":"6.2423","currency":"CNY","pair":"USDCNY"},{"ask":"117.505","bid":"117.501","currency":"JPY","pair":"USDJPY"},{"ask":"1","bid":"1","currency":"USD","pair":"USDUSD"},{"ask":"1315.0475","bid":"1294.093","currency":"USD","pair":"XAUUSD"},{"ask":"1","bid":"1","currency":"XAU","pair":"XAUXAU"}]'
+    http_version: 
+  recorded_at: Tue, 27 Jan 2015 14:26:56 GMT
+recorded_with: VCR 2.9.3

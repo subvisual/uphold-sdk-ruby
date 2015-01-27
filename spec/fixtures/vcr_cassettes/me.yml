@@ -1,0 +1,185 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.bitreserve.org/v0/me
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <BITRESERVE_AUTH_TOKEN>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Tue, 27 Jan 2015 13:54:02 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '5609'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dca89ea1c8078c370d09da88a319cee071422366842; expires=Wed, 27-Jan-16
+        13:54:02 GMT; path=/; domain=.bitreserve.org; HttpOnly
+      X-Content-Security-Policy:
+      - default-src "none"
+      Content-Security-Policy:
+      - default-src "none"
+      X-Webkit-Csp:
+      - default-src "none"
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Bitreserve-Request-Id:
+      - 14229d9a-c52a-47f7-9219-f39e9dc5af42
+      X-Ratelimit-Limit:
+      - '300'
+      X-Ratelimit-Remaining:
+      - '299'
+      X-Ratelimit-Reset:
+      - '1422367142'
+      Cf-Ray:
+      - 1af5709bfcb70ded-MAD
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJ1c2VybmFtZSI6Im1wYWxoYXMiLCJlbWFpbCI6Im1wYWxoYXNAZ3JvdXBi
+        dWRkaWVzLmNvbSIsImZpcnN0TmFtZSI6Ik1pZ3VlbCIsImxhc3ROYW1lIjoi
+        UGFsaGFzIiwibmFtZSI6Ik1pZ3VlbCBQYWxoYXMiLCJjb3VudHJ5IjoiUFQi
+        LCJzdGF0ZSI6bnVsbCwiY3VycmVuY2llcyI6WyJCVEMiLCJVU0QiLCJFVVIi
+        LCJHQlAiLCJDTlkiLCJKUFkiLCJYQVUiXSwiaWRlbnRpdHkiOnt9LCJzZXR0
+        aW5ncyI6eyJ0aGVtZSI6InZpbnRhZ2UiLCJjdXJyZW5jeSI6IlVTRCIsImhh
+        c05ld3NTdWJzY3JpcHRpb24iOiJ0cnVlIiwiaW50bCI6eyJsYW5ndWFnZSI6
+        eyJsb2NhbGUiOiJlbi1VUyJ9LCJkYXRlVGltZUZvcm1hdCI6eyJsb2NhbGUi
+        OiJlbi1VUyJ9LCJudW1iZXJGb3JtYXQiOnsibG9jYWxlIjoiZW4tVVMifX0s
+        Imhhc090cEVuYWJsZWQiOiJ0cnVlIn0sInBob25lcyI6W3siaWQiOiJlY2Q1
+        ZDVmYS1kYzkyLTRiYjktOTk0YS0xYWNhNzVkYmIxNzMiLCJ2ZXJpZmllZCI6
+        InRydWUiLCJwcmltYXJ5IjoidHJ1ZSIsImUxNjRNYXNrZWQiOiIrWFhYWFhY
+        WFhYWDQ5IiwibmF0aW9uYWxNYXNrZWQiOiJYWFggWFhYIFg0OSIsImludGVy
+        bmF0aW9uYWxNYXNrZWQiOiIrWFhYIFhYWCBYWFggWDQ5In1dLCJzdGF0dXMi
+        OnsiZW1haWwiOiJvayIsInBob25lIjoib2siLCJyZXZpZXciOiJwZW5kaW5n
+        Iiwidm9sdW1lIjoicnVubmluZyIsImlkZW50aXR5IjoicmVhZHkiLCJvdmVy
+        dmlldyI6InBlbmRpbmciLCJzY3JlZW5pbmciOiJvayIsInJlZ2lzdHJhdGlv
+        biI6Im9rIn0sImJhbGFuY2VzIjp7InRvdGFsIjoiNy45MiIsImN1cnJlbmNp
+        ZXMiOnsiQlRDIjp7ImFtb3VudCI6IjAuMDAiLCJiYWxhbmNlIjoiMC4wMCIs
+        ImN1cnJlbmN5IjoiVVNEIiwicmF0ZSI6IjI2NS4wNjAwMCJ9LCJVU0QiOnsi
+        YW1vdW50IjoiMC4wMCIsImJhbGFuY2UiOiIwLjAwIiwiY3VycmVuY3kiOiJV
+        U0QiLCJyYXRlIjoiMS4wMDAwMCJ9LCJHQlAiOnsiYW1vdW50IjoiMC4wMCIs
+        ImJhbGFuY2UiOiIwLjAwIiwiY3VycmVuY3kiOiJVU0QiLCJyYXRlIjoiMS41
+        MTU2MCJ9LCJDTlkiOnsiYW1vdW50IjoiMC4wMCIsImJhbGFuY2UiOiIwLjAw
+        IiwiY3VycmVuY3kiOiJVU0QiLCJyYXRlIjoiMC4xNjAxNSJ9LCJKUFkiOnsi
+        YW1vdW50IjoiMC4wMCIsImJhbGFuY2UiOiIwLjAwIiwiY3VycmVuY3kiOiJV
+        U0QiLCJyYXRlIjoiMC4wMDg1MSJ9LCJFVVIiOnsiYW1vdW50IjoiNi42MiIs
+        ImJhbGFuY2UiOiI1Ljg1IiwiY3VycmVuY3kiOiJVU0QiLCJyYXRlIjoiMS4x
+        MzIwNSJ9LCJYQVUiOnsiYW1vdW50IjoiMS4zMCIsImJhbGFuY2UiOiIwLjAw
+        MSIsImN1cnJlbmN5IjoiVVNEIiwicmF0ZSI6IjEzMDQuNTcwMjUifX19LCJj
+        YXJkcyI6W3siaWQiOiI4YTc3ZWQwZS1kODliLTRkNzMtYjQzOC0zM2NkNDdk
+        Y2FmZWYiLCJhZGRyZXNzIjp7ImJpdGNvaW4iOiIxR1hEU1JkbUV5TGJndkdh
+        M3pCdFcxUGZ0Z2djOFk4RldLIn0sImxhYmVsIjoiQlRDIGNhcmQiLCJjdXJy
+        ZW5jeSI6IkJUQyIsImJhbGFuY2UiOiIwLjAwIiwiYXZhaWxhYmxlIjoiMC4w
+        MCIsImxhc3RUcmFuc2FjdGlvbkF0IjpudWxsLCJwb3NpdGlvbiI6MX0seyJp
+        ZCI6ImQ5Y2ZiNWVjLTI3YjMtNDI3YS04ZWU2LTA4NGE3YzZiNWQyYSIsImFk
+        ZHJlc3MiOnsiYml0Y29pbiI6IjFKYm5zbnhFU3N1MWJWM0RWNERQQ1NOcDE1
+        SlE2eUNQZ0MifSwibGFiZWwiOiJVU0QgY2FyZCIsImN1cnJlbmN5IjoiVVNE
+        IiwiYmFsYW5jZSI6IjAuMDAiLCJhdmFpbGFibGUiOiIwLjAwIiwibGFzdFRy
+        YW5zYWN0aW9uQXQiOm51bGwsInBvc2l0aW9uIjoyfSx7ImlkIjoiN2ZhYWI4
+        ZTAtZmJiNy00YmI0LWFkMmYtOWUwZTA1ZWFiYzM1IiwiYWRkcmVzcyI6eyJi
+        aXRjb2luIjoiMUJzdkJKbmpYR1BDNjhtUFBtY3N2VVl6aWRHU1hnSmQ3USJ9
+        LCJsYWJlbCI6IkdCUCBjYXJkIiwiY3VycmVuY3kiOiJHQlAiLCJiYWxhbmNl
+        IjoiMC4wMCIsImF2YWlsYWJsZSI6IjAuMDAiLCJsYXN0VHJhbnNhY3Rpb25B
+        dCI6bnVsbCwicG9zaXRpb24iOjR9LHsiaWQiOiIxZjNlODU1Ny01YTQyLTRj
+        ZjktYTNmZC05MTliNjE0Yjg3ZjUiLCJhZGRyZXNzIjp7ImJpdGNvaW4iOiIx
+        OXhzY2tzVjlLNXRHM1BRRWtLZk5XamF4U3U4Z3pYMXBpIn0sImxhYmVsIjoi
+        Q05ZIGNhcmQiLCJjdXJyZW5jeSI6IkNOWSIsImJhbGFuY2UiOiIwLjAwIiwi
+        YXZhaWxhYmxlIjoiMC4wMCIsImxhc3RUcmFuc2FjdGlvbkF0IjpudWxsLCJw
+        b3NpdGlvbiI6NX0seyJpZCI6IjM1M2NjNmQ0LWIxOWYtNDJlYy1hNzMzLWJi
+        YWY0NWNiMDA4OSIsImFkZHJlc3MiOnsiYml0Y29pbiI6IjE5MlI5NHhnNWFj
+        Q0FZSnFYWVd2ZTRMNldFYUVFTVUzUlkifSwibGFiZWwiOiJKUFkgY2FyZCIs
+        ImN1cnJlbmN5IjoiSlBZIiwiYmFsYW5jZSI6IjAuMDAiLCJhdmFpbGFibGUi
+        OiIwLjAwIiwibGFzdFRyYW5zYWN0aW9uQXQiOm51bGwsInBvc2l0aW9uIjo2
+        fSx7ImlkIjoiMjFhNmYxMTAtYTY4NC00NjI3LWFmZGEtYmYwM2VjYTczM2Nm
+        IiwiYWRkcmVzcyI6eyJiaXRjb2luIjoiMU04Sk5Bb1B4S2ZRaXZYOHJ6bzN4
+        MXFLWDZ0Zjg1N0hHZiJ9LCJsYWJlbCI6IkVVUiBjYXJkIiwiY3VycmVuY3ki
+        OiJFVVIiLCJiYWxhbmNlIjoiNS44NSIsImF2YWlsYWJsZSI6IjUuODUiLCJs
+        YXN0VHJhbnNhY3Rpb25BdCI6IjIwMTQtMTEtMjFUMTc6Mzc6MDQuNzY5WiIs
+        InBvc2l0aW9uIjozfSx7ImlkIjoiMmRhYTU5ZTgtODljNS00Y2JlLTk5ZmMt
+        ZjY2NDM1MDI0YmNmIiwiYWRkcmVzcyI6eyJiaXRjb2luIjoiMUxiSGhWRmpM
+        ZUMzaFZoVzRGWHJ3dTdNTlVDa29HVHdBNSJ9LCJsYWJlbCI6IlhBVSBjYXJk
+        IiwiY3VycmVuY3kiOiJYQVUiLCJiYWxhbmNlIjoiMC4wMDEiLCJhdmFpbGFi
+        bGUiOiIwLjAwMSIsImxhc3RUcmFuc2FjdGlvbkF0IjoiMjAxNC0xMi0wMlQw
+        MDoyOTo0NS41MDdaIiwicG9zaXRpb24iOjd9XSwidHJhbnNhY3Rpb25zIjpb
+        eyJpZCI6ImQyNmE2MWNlLWE0MTQtNDQ3Mi04ZjY1LTY1OWY2M2U4ODU5NSIs
+        InR5cGUiOiJ0cmFuc2ZlciIsIm1lc3NhZ2UiOm51bGwsImRlbm9taW5hdGlv
+        biI6eyJwYWlyIjoiWEFVWEFVIiwicmF0ZSI6IjEuMDAiLCJhbW91bnQiOiIw
+        LjAwMSIsImN1cnJlbmN5IjoiWEFVIn0sIm9yaWdpbiI6eyJiYXNlIjoiMC4w
+        MDEiLCJjb21taXNzaW9uIjoiMC4wMCIsImZlZSI6IjAuMDAiLCJhbW91bnQi
+        OiIwLjAwMSIsImN1cnJlbmN5IjoiWEFVIiwiZGVzY3JpcHRpb24iOiJUaGUg
+        Qml0cmVzZXJ2ZSBUZWFtIiwicmF0ZSI6IjEuMDAiLCJzb3VyY2VzIjpbeyJp
+        ZCI6ImMwZjI5ZDgzLTdiY2YtNDlmZi1iOGQ5LWM0NjlhMjVhODkxYyIsImFt
+        b3VudCI6IjAuMDAxIn1dLCJ0eXBlIjoiY2FyZCIsInVzZXJuYW1lIjoiYml0
+        cmVzZXJ2ZSJ9LCJkZXN0aW5hdGlvbiI6eyJiYXNlIjoiMC4wMDEiLCJjb21t
+        aXNzaW9uIjoiMC4wMCIsImZlZSI6IjAuMDAiLCJhbW91bnQiOiIwLjAwMSIs
+        IkNhcmRJZCI6IjJkYWE1OWU4LTg5YzUtNGNiZS05OWZjLWY2NjQzNTAyNGJj
+        ZiIsImN1cnJlbmN5IjoiWEFVIiwiZGVzY3JpcHRpb24iOiJNaWd1ZWwgUGFs
+        aGFzIiwicmF0ZSI6IjEuMDAiLCJ0eXBlIjoidXNlciIsInVzZXJuYW1lIjoi
+        bXBhbGhhcyJ9LCJzdGF0dXMiOiJjb21wbGV0ZWQiLCJwYXJhbXMiOnsidHlw
+        ZSI6ImludGVybmFsIiwicGFpciI6IlhBVVhBVSIsIm1hcmdpbiI6IjAuMDAi
+        LCJyYXRlIjoiMS4wMCIsImN1cnJlbmN5IjoiWEFVIiwicHJvZ3Jlc3MiOiIx
+        IiwidHRsIjoiMzAifSwiY3JlYXRlZEF0IjoiMjAxNC0xMi0wMlQwMDoyOTo0
+        NS40ODRaIn0seyJpZCI6ImVmOWU4OGYxLWFiYjUtNDZmMy1hYzI1LTk3NzEz
+        ZmY1Yzc5OSIsInR5cGUiOiJ0cmFuc2ZlciIsIm1lc3NhZ2UiOm51bGwsImRl
+        bm9taW5hdGlvbiI6eyJwYWlyIjoiRVVSRVVSIiwicmF0ZSI6IjEuMDAiLCJh
+        bW91bnQiOiIwLjg1IiwiY3VycmVuY3kiOiJFVVIifSwib3JpZ2luIjp7ImJh
+        c2UiOiIwLjAwMjk3MDk0IiwiY29tbWlzc2lvbiI6IjAuMDAwMDQxNTMiLCJm
+        ZWUiOiIwLjAwMDEiLCJhbW91bnQiOiIwLjAwMzExMjQ3IiwiY3VycmVuY3ki
+        OiJCVEMiLCJkZXNjcmlwdGlvbiI6Ikpvw6NvIEp1c3RvIiwicmF0ZSI6IjAu
+        MDAzNDcwODEiLCJzb3VyY2VzIjpbeyJpZCI6IjFlZTkwN2YzLTRjNzAtNDU0
+        MS1hYzU3LTllNDkyMDllZWE3NiIsImFtb3VudCI6IjAuMDAzMTEyNDcifV0s
+        InR5cGUiOiJjYXJkIiwidXNlcm5hbWUiOiJqdXN0byJ9LCJkZXN0aW5hdGlv
+        biI6eyJiYXNlIjoiMC44NSIsImNvbW1pc3Npb24iOiIwLjAwIiwiZmVlIjoi
+        MC4wMCIsImFtb3VudCI6IjAuODUiLCJDYXJkSWQiOiIyMWE2ZjExMC1hNjg0
+        LTQ2MjctYWZkYS1iZjAzZWNhNzMzY2YiLCJjdXJyZW5jeSI6IkVVUiIsImRl
+        c2NyaXB0aW9uIjoiTWlndWVsIFBhbGhhcyIsInJhdGUiOiIyODguMTE4NjIi
+        LCJ0eXBlIjoiY2FyZCIsInVzZXJuYW1lIjoibXBhbGhhcyJ9LCJzdGF0dXMi
+        OiJjb21wbGV0ZWQiLCJwYXJhbXMiOnsidHlwZSI6ImludGVybmFsIiwicGFp
+        ciI6IkJUQ0VVUiIsIm1hcmdpbiI6IjAuOTUiLCJyYXRlIjoiMjg4LjExODYy
+        IiwiY3VycmVuY3kiOiJFVVIiLCJwcm9ncmVzcyI6IjEiLCJ0dGwiOiIzMCIs
+        InR4aWQiOiIxNTk1NGU1YzhiZjI3MzBjNzQ5MDA2ZjM1Y2Y1MDQ0MzU4MWI4
+        MDljMTc4ZjBlOGU1ZWFhODkwZmNhOTg2NGQwIn0sImNyZWF0ZWRBdCI6IjIw
+        MTQtMTEtMjFUMTc6Mzc6MDQuNzQxWiJ9LHsiaWQiOiJmYTU2NDQ0Ny00NDY5
+        LTRiOTYtOWI1Mi1mNmU2MzNlYmI0MmIiLCJ0eXBlIjoidHJhbnNmZXIiLCJt
+        ZXNzYWdlIjoiUHJlbmRhIDopIEFicmHDp28sIFJvYmVydG8iLCJkZW5vbWlu
+        YXRpb24iOnsicGFpciI6IkVVUkVVUiIsInJhdGUiOiIxLjAwIiwiYW1vdW50
+        IjoiNS4wMCIsImN1cnJlbmN5IjoiRVVSIn0sIm9yaWdpbiI6eyJiYXNlIjoi
+        MC4wMTY2OTc0NiIsImNvbW1pc3Npb24iOiIwLjAwMDE4MTk4IiwiZmVlIjoi
+        MC4wMDAxIiwiYW1vdW50IjoiMC4wMTY5Nzk0NCIsImN1cnJlbmN5IjoiQlRD
+        IiwiZGVzY3JpcHRpb24iOiJSb2JlcnRvIE1hY2hhZG8iLCJyYXRlIjoiMC4w
+        MDMzMzY4MyIsInNvdXJjZXMiOlt7ImlkIjoiMWFiMDdlNjUtZTE4My00NGJl
+        LWE3MDMtZWQ0ZDM4NzgwNzJiIiwiYW1vdW50IjoiMC4wMTY5Nzk0NCJ9XSwi
+        dHlwZSI6ImNhcmQiLCJ1c2VybmFtZSI6InJtZG1hY2hhZG8ifSwiZGVzdGlu
+        YXRpb24iOnsiYmFzZSI6IjUuMDAiLCJjb21taXNzaW9uIjoiMC4wMCIsImZl
+        ZSI6IjAuMDAiLCJhbW91bnQiOiI1LjAwIiwiQ2FyZElkIjoiMjFhNmYxMTAt
+        YTY4NC00NjI3LWFmZGEtYmYwM2VjYTczM2NmIiwiY3VycmVuY3kiOiJFVVIi
+        LCJkZXNjcmlwdGlvbiI6Ik1pZ3VlbCBQYWxoYXMiLCJyYXRlIjoiMjk5LjY4
+        NDIyIiwidHlwZSI6ImVtYWlsIiwidXNlcm5hbWUiOiJtcGFsaGFzIn0sInN0
+        YXR1cyI6ImNvbXBsZXRlZCIsInBhcmFtcyI6eyJ0eXBlIjoiaW52aXRlIiwi
+        cGFpciI6IkJUQ0VVUiIsIm1hcmdpbiI6IjAuOTUiLCJyYXRlIjoiMjk5LjY4
+        NDIyIiwiY3VycmVuY3kiOiJFVVIiLCJwcm9ncmVzcyI6IjEiLCJ0dGwiOiIz
+        MCIsInR4aWQiOiIyNjRhYjhiYzBmODkzYTk5MGM1YmI5MWI2YmMzNzM2OWVl
+        NTVkMTFkYzEzNjE5OGI2OTU3MGI2Y2YzZjZlNzRjIn0sImNyZWF0ZWRBdCI6
+        IjIwMTQtMTEtMTlUMTc6MzA6MjIuNDM4WiJ9XX0=
+    http_version: 
+  recorded_at: Tue, 27 Jan 2015 13:54:02 GMT
+recorded_with: VCR 2.9.3
