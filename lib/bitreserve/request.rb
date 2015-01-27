@@ -1,7 +1,6 @@
 module Bitreserve
-  class Request
+  class BaseRequest
     include ::HTTParty
-    base_uri "#{Bitreserve.api_base}/v#{Bitreserve.api_version}"
 
     def self.perform_with_objects(http_method, request_data)
       response = new(request_data).public_send(http_method)
@@ -17,46 +16,40 @@ module Bitreserve
       @path = request_data.endpoint
       @data = request_data.payload
       @auth = request_data.auth
-      Request.headers request_data.headers
-      base_uri_for_auth
+      @headers = request_data.headers
     end
 
     def get
-      response = Request.get(path, options)
+      response = self.class.get(path, options)
       log_request_info(:get, response)
       response.parsed_response
     end
 
     def post
-      response = Request.post(path, options)
+      response = self.class.post(path, options)
       log_request_info(:post, response)
       response.parsed_response
     end
 
     private
 
-    attr_reader :path, :data, :auth
-
-    def base_uri_for_auth
-      return unless auth
-
-      Request.base_uri "#{Bitreserve.api_base}"
-    end
+    attr_reader :path, :data, :auth, :headers
 
     def options
-      options = {}
-      if auth
-        options.merge!(basic_auth: auth)
-      end
-
-      if data
-        options.merge!(body: data)
-      end
-      options
+      { basic_auth: auth, body: data, headers: headers }.
+        reject { |_k, v| v.nil? }
     end
 
     def log_request_info(http_method, response)
-      Bitreserve.logger.info "[Bitreserve] #{http_method.to_s.upcase} #{Request.base_uri}#{path} #{Request.headers} #{response.code}"
+      Bitreserve.logger.info "[Bitreserve] #{http_method.to_s.upcase} #{self.class.base_uri}#{path} #{self.class.headers} #{response.code}"
     end
+  end
+
+  class Request < BaseRequest
+    base_uri "#{Bitreserve.api_base}/v#{Bitreserve.api_version}"
+  end
+
+  class AuthRequest < Request
+    base_uri Bitreserve.api_base
   end
 end

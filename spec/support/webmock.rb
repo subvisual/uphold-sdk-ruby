@@ -18,7 +18,7 @@ module WebMockHelpers
   private
 
   def self.generate_auth_url(url, auth)
-    uri = URI.parse(Bitreserve::Request.base_uri)
+    uri = URI.parse(Bitreserve::AuthRequest.base_uri)
     uri.scheme + '://' + auth[:username] + ':' + auth[:password] + '@' + uri.host + url
   end
 end

@@ -30,7 +30,7 @@ module Bitreserve
 
         Request.public_send(method_name, :get, request_data(url, client))
 
-        expect(Request).to have_received(:get).with(url, {})
+        expect(Request).to have_received(:get).with(url, headers: client.authorization_header)
       end
 
       it 'makes the actual POST call' do
@@ -41,18 +41,7 @@ module Bitreserve
 
         Request.public_send(method_name, :post, request_data(url, client, data))
 
-        expect(Request).to have_received(:post).with(url, body: data)
-      end
-
-      it 'makes a call with basic auth' do
-        url = '/some-url'
-        auth = { username: 'user', password: 'pass' }
-        WebMockHelpers.bitreserve_stub_request_with_auth(:get, url, [], auth)
-        allow(Request).to receive(:get).and_call_original
-
-        Request.public_send(method_name, :get, request_data(url, client, nil, auth))
-
-        expect(Request).to have_received(:get).with(url, basic_auth: auth)
+        expect(Request).to have_received(:post).with(url, body: data, headers: client.authorization_header)
       end
     end
 

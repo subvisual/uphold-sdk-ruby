@@ -9,7 +9,7 @@ module Bitreserve
           nil,
           username: username, password: password
         )
-        Request.perform_with_object(:post, request_data)
+        AuthRequest.perform_with_object(:post, request_data)
       end
     end
   end
