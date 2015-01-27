@@ -1,0 +1,62 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.bitreserve.org/v0/me/cards/a4feff08-2977-40f8-a339-4f546ae5c7e2/transactions/135a0708-898c-4de4-a5a0-58a463e0d7ab/commit
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <BITRESERVE_AUTH_TOKEN>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Wed, 28 Jan 2015 13:17:57 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '864'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d9beb753192cd3b08bf168e721c2fa1dd1422451077; expires=Thu, 28-Jan-16
+        13:17:57 GMT; path=/; domain=.bitreserve.org; HttpOnly
+      X-Content-Security-Policy:
+      - default-src "none"
+      Content-Security-Policy:
+      - default-src "none"
+      X-Webkit-Csp:
+      - default-src "none"
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Bitreserve-Request-Id:
+      - cc08d6d2-812a-444a-90ea-d9ff20f35944
+      X-Ratelimit-Limit:
+      - '300'
+      X-Ratelimit-Remaining:
+      - '292'
+      X-Ratelimit-Reset:
+      - '1422451344'
+      Cf-Ray:
+      - 1afd79231c580dc3-MAD
+    body:
+      encoding: UTF-8
+      string: '{"id":"135a0708-898c-4de4-a5a0-58a463e0d7ab","type":"transfer","message":null,"denomination":{"pair":"BTCBTC","rate":"1.00","amount":"0.0001","currency":"BTC"},"origin":{"base":"0.0001","commission":"0.00","fee":"0.00","amount":"0.0001","CardId":"a4feff08-2977-40f8-a339-4f546ae5c7e2","currency":"BTC","description":"Luis
+        Ferreira","rate":"1.00","sources":[{"id":"e6615095-8a90-483a-b58b-c46391308a53","amount":"0.0001"}],"type":"card","username":"zamith"},"destination":{"base":"0.0001","commission":"0.00","fee":"0.00","amount":"0.0001","CardId":"a0e20123-47c8-4784-9e71-0defb34d18a7","currency":"BTC","description":"Luis
+        Ferreira","rate":"1.00","type":"card","username":"zamith"},"status":"completed","params":{"type":"transfer","pair":"BTCBTC","margin":"0.00","rate":"1.00","currency":"BTC","progress":"1","ttl":"30000"},"createdAt":"2015-01-28T13:17:57.729Z"}'
+    http_version: 
+  recorded_at: Wed, 28 Jan 2015 13:17:59 GMT
+recorded_with: VCR 2.9.3

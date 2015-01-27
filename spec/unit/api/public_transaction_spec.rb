@@ -2,12 +2,12 @@ require 'spec_helper'
 
 module Bitreserve
   module API
-    describe Transaction do
+    describe PublicTransaction do
       let(:client) { Bitreserve::Client.new }
 
       context '#all_public_transactions' do
         it 'gets all public transactions' do
-          request_data = RequestData.new(Endpoints::TRANSACTIONS, Entities::Transaction, client.authorization_header)
+          request_data = RequestData.new(Endpoints::PUBLIC_TRANSACTIONS, Entities::Transaction, client.authorization_header)
           allow(Request).to receive(:perform_with_objects)
 
           client.all_public_transactions
@@ -20,7 +20,7 @@ module Bitreserve
       context '#find_public_transaction' do
         it 'gets a public transaction' do
           id = '1234'
-          request_data = RequestData.new(Endpoints::TRANSACTIONS + "/#{id}", Entities::Transaction, client.authorization_header)
+          request_data = RequestData.new(Endpoints::PUBLIC_TRANSACTIONS + "/#{id}", Entities::Transaction, client.authorization_header)
           allow(Request).to receive(:perform_with_object)
 
           client.find_public_transaction(id: id)

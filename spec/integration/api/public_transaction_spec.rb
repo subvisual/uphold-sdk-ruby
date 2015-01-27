@@ -2,8 +2,8 @@ require 'spec_helper'
 
 module Bitreserve
   module API
-    describe Transaction do
-      let(:client) { Bitreserve::Client.new }
+    describe PublicTransaction do
+      let(:client) { Client.new }
 
       context '#all_public_transactions' do
         it 'gets all public transactions' do

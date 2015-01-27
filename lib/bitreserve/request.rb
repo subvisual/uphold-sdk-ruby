@@ -42,6 +42,7 @@ module Bitreserve
 
     def log_request_info(http_method, response)
       Bitreserve.logger.info "[Bitreserve] #{http_method.to_s.upcase} #{self.class.base_uri}#{path} #{self.class.headers} #{response.code}"
+      Bitreserve.logger.debug response.parsed_response
     end
   end
 

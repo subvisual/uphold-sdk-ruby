@@ -11,6 +11,7 @@ Dir[File.join(Bitreserve::ROOT_PATH, '..', 'spec/support/**/*.rb')].each { |f| r
 
 class DummyLogger
   def self.info(_message); end
+  def self.debug(_message); end
 end
 Bitreserve.logger = DummyLogger
 

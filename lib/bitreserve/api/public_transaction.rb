@@ -1,9 +1,9 @@
 module Bitreserve
   module API
-    module Transaction
+    module PublicTransaction
       def all_public_transactions
         request_data = RequestData.new(
-          Endpoints::TRANSACTIONS,
+          Endpoints::PUBLIC_TRANSACTIONS,
           Entities::Transaction,
           authorization_header
         )
@@ -12,7 +12,7 @@ module Bitreserve
 
       def find_public_transaction(id: id)
         request_data = RequestData.new(
-          Endpoints::TRANSACTIONS + "/#{id}",
+          Endpoints::PUBLIC_TRANSACTIONS + "/#{id}",
           Entities::Transaction,
           authorization_header
         )
