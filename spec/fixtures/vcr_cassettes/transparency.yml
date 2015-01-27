@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.bitreserve.org/v0/reserve/statistics
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <BITRESERVE_AUTH_TOKEN>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Tue, 27 Jan 2015 17:53:26 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '5014'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d7978a65b9f913d33a9c44a2636303f921422381205; expires=Wed, 27-Jan-16
+        17:53:25 GMT; path=/; domain=.bitreserve.org; HttpOnly
+      X-Content-Security-Policy:
+      - default-src "none"
+      Content-Security-Policy:
+      - default-src "none"
+      X-Webkit-Csp:
+      - default-src "none"
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Bitreserve-Request-Id:
+      - 96f0ec67-bab8-4d0c-af23-ee44c83d9f68
+      X-Ratelimit-Limit:
+      - '300'
+      X-Ratelimit-Remaining:
+      - '299'
+      X-Ratelimit-Reset:
+      - '1422381505'
+      Cf-Ray:
+      - 1af6cf43e12e0db7-MAD
+    body:
+      encoding: UTF-8
+      string: '[{"currency":"BTC","values":[{"assets":"2956.170063","currency":"BTC","liabilities":"2100.194772","rate":"1.00"},{"assets":"782010.45","currency":"USD","liabilities":"555575.02","rate":"264.53500"},{"assets":"689330.03","currency":"EUR","liabilities":"489730.72","rate":"233.18231"},{"assets":"514768.42","currency":"GBP","liabilities":"365714.39","rate":"174.13280"},{"assets":"4881543.83","currency":"CNY","liabilities":"3468065.95","rate":"1651.30683"},{"assets":"92155630.48","currency":"JPY","liabilities":"65471460.44","rate":"31173.99480"},{"assets":"599.43912564","currency":"XAU","liabilities":"425.86822749","rate":"0.20277401"}],"totals":{"commissions":"107.23285","transactions":"25676.77009","assets":"4217.24016714","liabilities":"3475.47358198"}},{"currency":"USD","values":[{"assets":"1014.49210879","currency":"BTC","liabilities":"844.99087077","rate":"0.00378021"},{"assets":"268368.67","currency":"USD","liabilities":"223529.66","rate":"1.00"},{"assets":"236562.80","currency":"EUR","liabilities":"197037.91","rate":"0.88148"},{"assets":"176657.12","currency":"GBP","liabilities":"147141.27","rate":"0.65826"},{"assets":"1675237.75","currency":"CNY","liabilities":"1395339.20","rate":"6.24230"},{"assets":"31625771.73","currency":"JPY","liabilities":"26341741.02","rate":"117.84450"},{"assets":"205.71423425","currency":"XAU","liabilities":"171.34352098","rate":"0.00076653"}],"totals":{"commissions":"27242.14","transactions":"6666477.64","assets":"1115607.63","liabilities":"919384.40"}},{"currency":"EUR","values":[{"assets":"0.00","currency":"BTC","liabilities":"35.32129964","rate":"0.00428845"},{"assets":"0.00","currency":"USD","liabilities":"9343.72","rate":"1.13445"},{"assets":"0.00","currency":"EUR","liabilities":"8236.34","rate":"1.00"},{"assets":"0.00","currency":"GBP","liabilities":"6150.90","rate":"0.74680"},{"assets":"0.00","currency":"CNY","liabilities":"58326.47","rate":"7.08160"},{"assets":"0.00","currency":"JPY","liabilities":"1101105.59","rate":"133.68870"},{"assets":"0.00","currency":"XAU","liabilities":"7.16229732","rate":"0.00086958"}],"totals":{"commissions":"22930.89","transactions":"5595783.62","assets":"983390.75","liabilities":"810420.12"}},{"currency":"GBP","values":[{"assets":"0.00","currency":"BTC","liabilities":"273.01755911","rate":"0.0057427"},{"assets":"0.00","currency":"USD","liabilities":"72222.70","rate":"1.51915"},{"assets":"0.00","currency":"EUR","liabilities":"63660.31","rate":"1.33904"},{"assets":"0.00","currency":"GBP","liabilities":"47541.52","rate":"1.00"},{"assets":"0.00","currency":"CNY","liabilities":"450826.73","rate":"9.48280"},{"assets":"0.00","currency":"JPY","liabilities":"8510852.01","rate":"179.01935"},{"assets":"0.00","currency":"XAU","liabilities":"55.36129618","rate":"0.00116447"}],"totals":{"commissions":"17756.96","transactions":"4338799.64","assets":"734363.04","liabilities":"605196.91"}},{"currency":"CNY","values":[{"assets":"0.00","currency":"BTC","liabilities":"9.36598182","rate":"0.00060555"},{"assets":"0.00","currency":"USD","liabilities":"2477.63","rate":"0.16019"},{"assets":"0.00","currency":"EUR","liabilities":"2183.98","rate":"0.14121"},{"assets":"0.00","currency":"GBP","liabilities":"1630.96","rate":"0.10545"},{"assets":"0.00","currency":"CNY","liabilities":"15466.10","rate":"1.00"},{"assets":"0.00","currency":"JPY","liabilities":"291813.21","rate":"18.86792"},{"assets":"0.00","currency":"XAU","liabilities":"1.89919247","rate":"0.00012279"}],"totals":{"commissions":"168786.32","transactions":"41287185.08","assets":"6963957.51","liabilities":"5739069.19"}},{"currency":"JPY","values":[{"assets":"0.00","currency":"BTC","liabilities":"5.2773735","rate":"0.00003205"},{"assets":"0.00","currency":"USD","liabilities":"1396.05","rate":"0.00848"},{"assets":"0.00","currency":"EUR","liabilities":"1230.59","rate":"0.00748"},{"assets":"0.00","currency":"GBP","liabilities":"918.99","rate":"0.00558"},{"assets":"0.00","currency":"CNY","liabilities":"8719.38","rate":"0.05300"},{"assets":"0.00","currency":"JPY","liabilities":"164516.59","rate":"1.00"},{"assets":"0.00","currency":"XAU","liabilities":"1.07012252","rate":"0.0000065"}],"totals":{"commissions":"3185951.27","transactions":"780072808.88","assets":"131468223.36","liabilities":"108344036.46"}},{"currency":"XAU","values":[{"assets":"246.57799535","currency":"BTC","liabilities":"207.30572514","rate":"4.9315495"},{"assets":"65228.51","currency":"USD","liabilities":"54839.62","rate":"1304.57025"},{"assets":"57497.92","currency":"EUR","liabilities":"48340.27","rate":"1149.95258"},{"assets":"42937.50","currency":"GBP","liabilities":"36098.88","rate":"858.74641"},{"assets":"407175.93","currency":"CNY","liabilities":"342325.36","rate":"8143.51887"},{"assets":"7686821.15","currency":"JPY","liabilities":"6462547.60","rate":"153736.42882"},{"assets":"50.00","currency":"XAU","liabilities":"42.036544","rate":"1.00"}],"totals":{"commissions":"18.24159","transactions":"4371.57899","assets":"855.15335989","liabilities":"704.74120096"}}]'
+    http_version: 
+  recorded_at: Tue, 27 Jan 2015 17:53:27 GMT
+recorded_with: VCR 2.9.3
