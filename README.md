@@ -26,18 +26,20 @@ Or install it yourself as:
 # Contents
 
 * [Usage](#usage)
-* [Authentication](#authentication)
-  * [OAuth2](#oauth2)
-  * [Basic Auth](#basic-auth)
+* [Creating an authenticated client](#creating-an-authenticated-client)
   * [Personal Access Token](#personal-access-token)
     * [Via argument](#via-argument)
     * [Via environment variable](#via-environment-variable)
-* [API calls](#endpoints)
-  * [Currencies](#currencies)
+* [Endpoints](#endpoints)
+  * [Authentication](#authentication)
+    * [OAuth2](#oauth2)
+    * [Basic Authentication](#basic-authentication)
   * [Tickers](#tickers)
   * [Entities](#entities)
   * [Cards](#cards)
   * [Transactions](#transactions)
+    * [Public Transactions](#public-transactions)
+    * [Private Transactions](#private-transactions)
   * [Contacts](#contacts)
   * [Users](#users)
   * [Transparency](#transparency)
@@ -54,19 +56,15 @@ client = Bitreserve::Client.new
 puts client.all_tickers
 ```
 
-# Authentication
+# Creating an authenticated client
 
-## OAuth2
-
-TODO
-
-## Basic Auth
-
-TODO
+In order to make most of the API calls, you will need to authenticate your
+client. Here's how you can do that.
 
 ## Personal Access Token
 
-If you already have a token, you can use by setting an environment variable, or by passing when instantiating the client
+If you already have a token, you can use it by setting an environment variable,
+or by passing it when instantiating the client.
 
 ### Via argument
 
@@ -92,42 +90,155 @@ Bitreserve::Client.new
 
 # Endpoints
 
-## Currencies
+This is a comprehensive list of all the mappings between this wrapper and the
+Bitreserve's API.
+
+## Authentication
+
+[*Bitreserve documentation on authentication*](https://developer.bitreserve.org/api/v0/#authentication)
+
+### OAuth2
+
+**NOT SUPPORTED YET**
+
+### Basic Authentication
 
 TODO
 
 ## Tickers
 
-TODO
+[*Bitreserve documentation on tickers*](https://developer.bitreserve.org/api/v0/#tickers)
 
-## Entities
+**Return the current rates on Bitreserve for all currency pairs:**
 
-TODO
+```ruby
+client.all_tickers
+```
+
+**Return the current rates on Bitreserve for a specific currency:**
+
+```ruby
+client.find_ticker(currency: 'EUR')
+```
 
 ## Cards
 
-TODO
+[*Bitreserve documentation on cards*](https://developer.bitreserve.org/api/v0/#cards)
+
+**Return all the user's cards:**
+
+```ruby
+client.all_cards
+```
+
+**Return the details for a specific card associated with the user:**
+
+```ruby
+client.find_card(id: '37e002a7-8508-4268-a18c-7335a6ddf24b')
+```
+
+**Create a card for the user:**
+
+```ruby
+client.create_card(label: 'My label', currency: 'BTC')
+```
 
 ## Transactions
 
-TODO
+[*Bitreserve documentation on transactions*](https://developer.bitreserve.org/api/v0/#transactions)
+
+You can interact with both the authenticated user's and public transactions.
+
+### Public Transactions
+
+**Return the public view of all transactions in the reserve:**
+
+```ruby
+client.all_public_transactions
+```
+
+**Return the public view of a specific transaction:**
+
+```ruby
+client.find_public_transactions(id: 'a97bb994-6e24-4a89-b653-e0a6d0bcf634')
+```
+
+### Private Transactions
+
+**Create a transaction:**
+
+```ruby
+client.create_transaction(card_id: 'a6d35fcd-xxxx-9c9d1dda6d57', currency:
+'BTC', amount: 0.1, destination: 'foo@bar.com')
+```
+
+**Commit a transaction:**
+
+```ruby
+client.commit_transaction(card_id: 'a6d35fcd-xxxx-9c9d1dda6d57', transaction_id:
+'d51b4e4e-9827-40fb-8763-e0ea2880085b')
+```
+
+**Cancel a transaction:**
+
+```ruby
+client.cancel_transaction(card_id: 'a6d35fcd-xxxx-9c9d1dda6d57', transaction_id:
+'d51b4e4e-9827-40fb-8763-e0ea2880085b')
+```
+
+**Resend a transaction:**
+
+```ruby
+client.resend_transaction(card_id: 'a6d35fcd-xxxx-9c9d1dda6d57', transaction_id:
+'d51b4e4e-9827-40fb-8763-e0ea2880085b')
+```
+
+**Return all transactions associated with the user:**
+
+```ruby
+client.all_user_transactions
+```
+
+**Return all transactions associated with a card:**
+
+```ruby
+client.all_card_transactions
+```
 
 ## Contacts
 
-TODO
+[*Bitreserve documentation on contacts*](https://developer.bitreserve.org/api/v0/#contacts)
+
+**Return all the user's contacts:**
+
+```ruby
+client.all_contacts
+```
+
+**Return the details for a specific contact associated with the user:**
+
+```ruby
+client.find_contact(id: '9fae84eb-712d-4b6a-9b2c-764bdde4c079')
+```
+
+**Create a contact for the user:**
+
+```ruby
+client.create_contact(first_name: 'Luke', last_name: 'Skywalker', company: 'Lars
+Moisture Farm Inc', emails: ['support@larsmoisturefarm.com')
+```
 
 ## Users
 
 [*Bitreserve documentation on users*](https://developer.bitreserve.org/api/v0/#users)
 
-**Return the details of the current user:**
+**Return the details of the user:**
 
 ```ruby
 client.me
 ```
 
-
-**Return the list of phone numbers associated with the current user:**
+**Return the list of phone numbers associated with the user:**
 
 ```ruby
 client.phones
@@ -135,8 +246,13 @@ client.phones
 
 ## Transparency
 
-TODO
+[*Bitreserve documentation on transparency*](https://developer.bitreserve.org/api/v0/#reserve-status)
 
+**Return a summary of all obligations and assets:**
+
+```ruby
+client.statistics
+```
 
 # Contributing
 
