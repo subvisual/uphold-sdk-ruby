@@ -1,6 +1,6 @@
 module Bitreserve
   module Endpoints
-    AUTH = '/oauth2/tokens'
+    AUTH = '/me/tokens'
     CARD = '/me/cards'
     CARD_PRIVATE_TRANSACTIONS = CARD + '/:card/transactions'
     COMMIT_TRANSACTION = CARD_PRIVATE_TRANSACTIONS + '/:id/commit'

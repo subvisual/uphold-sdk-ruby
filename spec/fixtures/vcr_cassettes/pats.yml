@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://example:Password123@api.bitreserve.org/v0/me/tokens
+    body:
+      encoding: UTF-8
+      string: description=Bitreserve%20ruby
+    headers:
+      X-Bitreserve-Otp:
+      - '5960110'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Thu, 29 Jan 2015 16:24:12 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '106'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d8a73547e05f107f8c796bfcc238d8f851422548652; expires=Fri, 29-Jan-16
+        16:24:12 GMT; path=/; domain=.bitreserve.org; HttpOnly
+      X-Content-Security-Policy:
+      - default-src "none"
+      Content-Security-Policy:
+      - default-src "none"
+      X-Webkit-Csp:
+      - default-src "none"
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Bitreserve-Request-Id:
+      - 9eed6cc1-c6f3-43ac-9acf-9286a83935c7
+      X-Ratelimit-Limit:
+      - '300'
+      X-Ratelimit-Remaining:
+      - '298'
+      X-Ratelimit-Reset:
+      - '1422548935'
+      Cf-Ray:
+      - 1b06c7540a6e0ddb-MAD
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"853d580429364a90a6e02cb1f89e257a58da9064","description":"Bitreserve
+        ruby","expires":null}'
+    http_version: 
+  recorded_at: Thu, 29 Jan 2015 16:24:14 GMT
+recorded_with: VCR 2.9.3

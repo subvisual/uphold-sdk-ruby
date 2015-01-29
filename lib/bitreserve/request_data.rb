@@ -1,6 +1,6 @@
 module Bitreserve
-  class RequestData < Struct.new(:endpoint, :entity, :headers, :payload, :auth)
-    def initialize(endpoint, entity, headers = {}, payload = nil, auth = nil)
+  class RequestData < Struct.new(:endpoint, :entity, :headers, :payload)
+    def initialize(endpoint, entity, headers = {}, payload = nil)
       super
     end
   end

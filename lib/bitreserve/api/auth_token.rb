@@ -1,15 +1,16 @@
+require 'base64'
+
 module Bitreserve
   module API
     module AuthToken
-      def generate_access_token(username: '', password: '')
+      def generate_access_token(username: '', password: '', otp: '')
         request_data = Bitreserve::RequestData.new(
           Endpoints::AUTH,
           Entities::AuthToken,
-          authorization_header,
-          nil,
-          username: username, password: password
+          { 'X-Bitreserve-OTP' => otp, 'Authorization' => 'Basic ' + Base64.encode64("#{username}:#{password}") },
+          description: 'Bitreserve ruby'
         )
-        AuthRequest.perform_with_object(:post, request_data)
+        Request.perform_with_object(:post, request_data)
       end
     end
   end

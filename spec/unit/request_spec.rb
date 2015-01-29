@@ -4,7 +4,7 @@ module Bitreserve
   shared_examples 'perform request method' do |method_name|
     let(:object_class) { double('ObjectClass', new: nil, from_collection: nil) }
     let(:request) { spy('request') }
-    let(:client) { Bitreserve::Client.new }
+    let(:client) { Client.new }
 
     context ".#{method_name}" do
       it 'makes the correct call for a GET' do
@@ -43,11 +43,24 @@ module Bitreserve
 
         expect(Request).to have_received(:post).with(url, body: data, headers: client.authorization_header)
       end
+
+      it 'makes a call with basic auth' do
+        url = '/some-url'
+        headers = { header1: 'I am a header' }
+        body = { description: 'whatever' }
+        request_data = RequestData.new(url, object_class, headers, body)
+        WebMockHelpers.bitreserve_stub_request(:get, url)
+        allow(Request).to receive(:get).and_call_original
+
+        Request.public_send(method_name, :get, request_data)
+
+        expect(Request).to have_received(:get).with(url, headers: headers, body: body)
+      end
     end
 
-    def request_data(url = anything, client = nil, payload = nil, auth = nil)
+    def request_data(url = anything, client = nil, payload = nil)
       client ||= double('Client', authorization_header: {})
-      RequestData.new(url, object_class, client.authorization_header, payload, auth)
+      RequestData.new(url, object_class, client.authorization_header, payload)
     end
   end
 
