@@ -1,7 +1,12 @@
 module Bitreserve
   module Entities
     class Phone < BaseEntity
-      attr_reader :id, :verified, :primary, :e164_masked, :national_masked, :international_masked
+      attribute :id
+      attribute :verified, Boolean
+      attribute :primary, Boolean
+      attribute :e164_masked
+      attribute :national_masked
+      attribute :international_masked
     end
   end
 end

@@ -1,7 +1,10 @@
 module Bitreserve
   module Entities
     class Ticker < BaseEntity
-      attr_reader :ask, :bid, :currency, :pair
+      attribute :ask
+      attribute :bid
+      attribute :currency
+      attribute :pair
     end
   end
 end

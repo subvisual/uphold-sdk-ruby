@@ -1,7 +1,13 @@
 module Bitreserve
   module Entities
     class Contact < BaseEntity
-      attr_reader :id, :first_name, :last_name, :company, :emails, :addresses, :name
+      attribute :id
+      attribute :first_name
+      attribute :last_name
+      attribute :company
+      attribute :emails
+      attribute :addresses
+      attribute :name
     end
   end
 end

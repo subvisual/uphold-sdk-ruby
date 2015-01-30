@@ -1,7 +1,9 @@
 module Bitreserve
   module Entities
     class AuthToken < BaseEntity
-      attr_reader :access_token, :description, :expires
+      attribute :access_token
+      attribute :description
+      attribute :expires, DateTime
     end
   end
 end

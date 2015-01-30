@@ -1,7 +1,9 @@
 module Bitreserve
   module Entities
     class Asset < BaseEntity
-      attr_reader :currency, :values, :totals
+      attribute :currency
+      attribute :values
+      attribute :totals
     end
   end
 end

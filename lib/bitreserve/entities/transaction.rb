@@ -1,7 +1,17 @@
 module Bitreserve
   module Entities
     class Transaction < BaseEntity
-      attr_reader :id, :message, :status, :type, :refunded_by_id, :created_at, :denomination, :origin, :destination, :params, :quoted_at
+      attribute :id
+      attribute :message
+      attribute :status
+      attribute :type
+      attribute :refunded_by_id
+      attribute :created_at, DateTime
+      attribute :quoted_at, DateTime
+      attribute :denominatio
+      attribute :origin
+      attribute :destination
+      attribute :params
     end
   end
 end

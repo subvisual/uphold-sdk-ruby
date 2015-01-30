@@ -1,6 +1,7 @@
 require 'logger'
 require 'httparty'
 require 'dotenv'
+require 'virtus'
 Dotenv.load
 
 require 'bitreserve/version'

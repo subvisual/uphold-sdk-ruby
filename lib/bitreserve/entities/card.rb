@@ -1,8 +1,15 @@
 module Bitreserve
   module Entities
     class Card < BaseEntity
-      attr_reader :id, :address, :addresses, :label, :currency, :balance,
-        :available, :lastTransactionAt, :position
+      attribute :id
+      attribute :address
+      attribute :addresses
+      attribute :label
+      attribute :currency
+      attribute :balance
+      attribute :available
+      attribute :lastTransactionAt, DateTime
+      attribute :settings
     end
   end
 end
