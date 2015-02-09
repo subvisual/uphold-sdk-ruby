@@ -10,7 +10,7 @@ module Bitreserve
         Request.perform_with_objects(:get, request_data)
       end
 
-      def find_public_transaction(id: id)
+      def find_public_transaction(id: '')
         request_data = RequestData.new(
           Endpoints::PUBLIC_TRANSACTIONS + "/#{id}",
           Entities::Transaction,
