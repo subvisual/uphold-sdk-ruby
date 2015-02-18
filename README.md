@@ -43,6 +43,7 @@ Or install it yourself as:
   * [Contacts](#contacts)
   * [Users](#users)
   * [Transparency](#transparency)
+  * [Pagination](#pagination)
 * [Contributing](#contributing)
 
 # Usage
@@ -167,13 +168,15 @@ You can interact with both the authenticated user's and public transactions.
 
 ### Public Transactions
 
-**Return the public view of all transactions in the reserve:**
+**Return the public view of all transactions in the reserve (supports
+[Pagination](#pagination)):**
 
 ```ruby
 client.all_public_transactions
 ```
 
-**Return the public view of a specific transaction:**
+**Return the public view of a specific transaction (supports
+[Pagination](#pagination)):**
 
 ```ruby
 client.find_public_transactions(id: 'a97bb994-6e24-4a89-b653-e0a6d0bcf634')
@@ -209,7 +212,8 @@ client.resend_transaction(card_id: 'a6d35fcd-xxxx-9c9d1dda6d57', transaction_id:
 'd51b4e4e-9827-40fb-8763-e0ea2880085b')
 ```
 
-**Return all transactions associated with the user:**
+**Return all transactions associated with the user (supports
+[Pagination](#pagination)):**
 
 ```ruby
 client.all_user_transactions
@@ -268,6 +272,24 @@ client.phones
 
 ```ruby
 client.statistics
+```
+
+## Pagination
+
+[*Bitreserve documentation on pagination*](https://developer.bitreserve.org/api/v0/#pagination)
+
+All endpoints that support pagination take a `range` attribute, in which you can
+specify the first and last indexes for the items you wish to retrieve.
+
+The response will look exactly like an `Array`, but with a method called
+`total_items`, that returns the total number of items of that type that
+Bitreserve knows of.
+
+```ruby
+client = Bitreserve::Client.new token: 'XXX'
+client.all_public_transactions.size # 5
+client.all_public_transactions.total_size # 21110
+client.all_public_transactions(range: (5..20)).size # 16
 ```
 
 # Contributing

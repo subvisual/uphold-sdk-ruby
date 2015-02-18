@@ -1,11 +1,11 @@
 module Bitreserve
   module API
     module PublicTransaction
-      def all_public_transactions
+      def all_public_transactions(range: (0..4))
         request_data = RequestData.new(
           Endpoints::PUBLIC_TRANSACTIONS,
           Entities::Transaction,
-          authorization_header
+          authorization_header.merge(pagination_header_for_range(range))
         )
         Request.perform_with_objects(:get, request_data)
       end

@@ -7,7 +7,7 @@ module Bitreserve
 
       context '#all_public_transactions' do
         it 'gets all public transactions' do
-          request_data = RequestData.new(Endpoints::PUBLIC_TRANSACTIONS, Entities::Transaction, client.authorization_header)
+          request_data = RequestData.new(Endpoints::PUBLIC_TRANSACTIONS, Entities::Transaction, client.authorization_header.merge(client.pagination_header_for_range(0..4)))
           allow(Request).to receive(:perform_with_objects)
 
           client.all_public_transactions

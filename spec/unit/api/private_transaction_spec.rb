@@ -82,7 +82,7 @@ module Bitreserve
           request_data = RequestData.new(
             Endpoints::USER_PRIVATE_TRANSACTIONS,
             Entities::Transaction,
-            client.authorization_header
+            client.authorization_header.merge(client.pagination_header_for_range(0..4))
           )
           allow(Request).to receive(:perform_with_objects)
 
@@ -99,7 +99,7 @@ module Bitreserve
           request_data = RequestData.new(
             Endpoints.with_placeholders(Endpoints::CARD_PRIVATE_TRANSACTIONS, ':card' => card_id),
             Entities::Transaction,
-            client.authorization_header
+            client.authorization_header.merge(client.pagination_header_for_range(0..4))
           )
           allow(Request).to receive(:perform_with_objects)
 

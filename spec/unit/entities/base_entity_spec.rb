@@ -26,7 +26,7 @@ module Bitreserve
           entity = double('Entity')
           allow(MockEntity).to receive(:new)
 
-          MockEntity.from_collection([entity])
+          MockEntity.from_collection([entity], '0-1/10')
 
           expect(MockEntity).to have_received(:new).with(entity)
         end

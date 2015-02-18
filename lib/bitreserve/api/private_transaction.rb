@@ -26,20 +26,20 @@ module Bitreserve
         Request.perform_with_object(:post, request_data)
       end
 
-      def all_user_transactions
+      def all_user_transactions(range: (0..4))
         request_data = RequestData.new(
           Endpoints::USER_PRIVATE_TRANSACTIONS,
           Entities::Transaction,
-          authorization_header
+          authorization_header.merge(pagination_header_for_range(range))
         )
         Request.perform_with_objects(:get, request_data)
       end
 
-      def all_card_transactions(card_id: nil)
+      def all_card_transactions(card_id: nil, range: (0..4))
         request_data = RequestData.new(
           Endpoints.with_placeholders(Endpoints::CARD_PRIVATE_TRANSACTIONS, ':card' => card_id),
           Entities::Transaction,
-          authorization_header
+          authorization_header.merge(pagination_header_for_range(range))
         )
         Request.perform_with_objects(:get, request_data)
       end

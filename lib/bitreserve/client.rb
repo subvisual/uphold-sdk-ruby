@@ -1,7 +1,9 @@
 require 'bitreserve/api'
+require 'bitreserve/pagination'
 
 module Bitreserve
   class Client
+    include Pagination
     include API
     attr_reader :bearer_token
 

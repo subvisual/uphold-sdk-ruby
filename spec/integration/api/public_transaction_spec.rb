@@ -11,6 +11,7 @@ module Bitreserve
             transactions = client.all_public_transactions
 
             expect(transactions).to be_a(Array)
+            expect(transactions.total_size).to eq 2
             expect(transactions.first).to be_a(Entities::Transaction)
             expect(transactions.first.id).to be_a(String)
           end
