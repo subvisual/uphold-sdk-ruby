@@ -15,3 +15,5 @@ mkmf.log
 .env
 tags
 .tags
+path
+.ruby-version

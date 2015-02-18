@@ -13,7 +13,6 @@ module Bitreserve
       attribute :balances
       attribute :phones, Array[Entities::Phone]
       attribute :cards, Array[Entities::Card]
-      attribute :transactions, Array[Entities::Transaction]
     end
   end
 end

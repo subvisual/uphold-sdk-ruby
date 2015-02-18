@@ -10,7 +10,6 @@ module Bitreserve
     PUBLIC_TRANSACTIONS = '/reserve/transactions'
     STATS = '/reserve/statistics'
     TICKER = '/ticker'
-    TRANSACTIONS = '/reserve/transactions'
     USER = '/me'
     USER_CONTACTS = '/me/contacts'
     USER_PHONES = '/me/phones'
