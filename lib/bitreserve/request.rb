@@ -5,12 +5,18 @@ module Bitreserve
 
     def self.perform_with_objects(http_method, request_data)
       response = new(request_data).public_send(http_method)
-      request_data.entity.from_collection(response)
+      check_error(response) || request_data.entity.from_collection(response)
     end
 
     def self.perform_with_object(http_method, request_data)
       response = new(request_data).public_send(http_method)
-      request_data.entity.new(response)
+      check_error(response) || request_data.entity.new(response)
+    end
+
+    def self.check_error(response)
+      return unless response.is_a?(Hash) && response['error']
+
+      Entities::Error.new(response)
     end
 
     def initialize(request_data)

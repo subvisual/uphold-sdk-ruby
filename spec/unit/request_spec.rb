@@ -56,6 +56,17 @@ module Bitreserve
 
         expect(Request).to have_received(:get).with(url, headers: headers, body: body)
       end
+
+      it 'handles an error response' do
+        fake_error = { code: '401', error: 'message' }
+        request_data = RequestData.new('/some-url', object_class)
+        WebMockHelpers.bitreserve_stub_request(:get, '/some-url', fake_error)
+
+        result = Request.public_send(method_name, :get, request_data)
+
+        expect(result).to be_a(Entities::Error)
+        expect(result.code).to eq '401'
+      end
     end
 
     def request_data(url = anything, client = nil, payload = nil)
