@@ -8,7 +8,7 @@ module Bitreserve
       attribute :refunded_by_id
       attribute :created_at, DateTime
       attribute :quoted_at, DateTime
-      attribute :denominatio
+      attribute :denomination
       attribute :origin
       attribute :destination
       attribute :params
