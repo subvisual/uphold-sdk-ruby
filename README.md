@@ -63,6 +63,9 @@ client. Here's how you can do that.
 
 ## Personal Access Token
 
+If you don't have a PAT, learn how to generate one
+[here](#basic-authentication).
+
 If you already have a token, you can use it by setting an environment variable,
 or by passing it when instantiating the client.
 
@@ -104,6 +107,10 @@ Bitreserve's API.
 ### Basic Authentication
 
 [*Bireserve documentation on basic authentication*](https://developer.bitreserve.org/api/v0/#basic-authentication)
+
+The only thing you need to use basic authentication is a Personal Access Token,
+everything else is transparent to you. If you already have a token, see how to
+use it [here](#personal-access-token).
 
 ```ruby
 client.generate_access_token(username: 'your-bitreserve-username', password:
