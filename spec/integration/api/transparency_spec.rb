@@ -16,6 +16,18 @@ module Bitreserve
           end
         end
       end
+
+      context '#ledger' do
+        it 'gets all the ledger entries' do
+          VCR.use_cassette('ledger') do
+            assets = client.ledger
+
+            expect(assets).to be_a(Array)
+            expect(assets.first).to be_a(Entities::LedgerEntry)
+            expect(assets.first.type).to be_a(String)
+          end
+        end
+      end
     end
   end
 end

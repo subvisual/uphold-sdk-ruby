@@ -266,12 +266,21 @@ client.phones
 
 ## Transparency
 
-[*Bitreserve documentation on transparency*](https://developer.bitreserve.org/api/v0/#reserve-status)
+[*Bitreserve documentation on the reserve status*](https://developer.bitreserve.org/api/v0/#reserve-status)
 
 **Return a summary of all obligations and assets:**
 
 ```ruby
 client.statistics
+```
+
+[*Bitreserve documentation on the reserve ledger*](https://developer.bitreserve.org/api/v0/#the-reserveledger)
+
+**Return a detailed record of all obligations and assets flowing into the
+network:**
+
+```ruby
+client.ledger
 ```
 
 ## Pagination

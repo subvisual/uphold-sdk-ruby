@@ -8,6 +8,7 @@ module Bitreserve
     RESEND_TRANSACTION = CARD_PRIVATE_TRANSACTIONS + '/:id/resend'
     USER_PRIVATE_TRANSACTIONS = '/me/transactions'
     PUBLIC_TRANSACTIONS = '/reserve/transactions'
+    LEDGER = '/reserve/ledger'
     STATS = '/reserve/statistics'
     TICKER = '/ticker'
     USER = '/me'

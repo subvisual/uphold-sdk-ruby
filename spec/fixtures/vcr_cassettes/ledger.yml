@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.bitreserve.org/v0/reserve/ledger
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <BITRESERVE_AUTH_TOKEN>
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 11 Mar 2015 17:02:48 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '8207'
+      Connection:
+      - keep-alive
+      X-Content-Security-Policy:
+      - default-src "none"
+      Content-Security-Policy:
+      - default-src "none"
+      X-Webkit-Csp:
+      - default-src "none"
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Bitreserve-Request-Id:
+      - fe6c7f3b-e8ce-4151-a39a-ac8b92913522
+      X-Ratelimit-Limit:
+      - '300'
+      X-Ratelimit-Remaining:
+      - '299'
+      X-Ratelimit-Reset:
+      - '1426093668'
+      Content-Range:
+      - items 0-49/54765
+    body:
+      encoding: UTF-8
+      string: '[{"type":"asset","out":{"amount":"0.2","currency":"BTC"},"in":{"amount":"58.48","currency":"USD"},"createdAt":"2015-03-11T17:02:24.638Z"},{"type":"liability","out":{"amount":"0.00","currency":"BTC"},"in":{"amount":"0.2","currency":"BTC"},"TransactionId":"85694bac-6056-4dc8-a6a8-1cba0fd753d7","createdAt":"2015-03-11T17:01:52.509Z"},{"type":"asset","out":{"amount":"0.00","currency":"BTC"},"in":{"amount":"0.2","currency":"BTC"},"createdAt":"2015-03-11T17:01:52.509Z"},{"type":"asset","out":{"amount":"0.05","currency":"BTC"},"in":{"amount":"0.05","currency":"BTC"},"createdAt":"2015-03-11T17:01:14.158Z"},{"type":"asset","out":{"amount":"0.05","currency":"BTC"},"in":{"amount":"0.05","currency":"BTC"},"createdAt":"2015-03-11T17:01:14.093Z"},{"type":"asset","out":{"amount":"0.05","currency":"BTC"},"in":{"amount":"0.05","currency":"BTC"},"createdAt":"2015-03-11T17:00:08.512Z"},{"type":"asset","out":{"amount":"22.4421","currency":"BTC"},"in":{"amount":"0.00","currency":"BTC"},"createdAt":"2015-03-11T17:00:08.449Z"},{"type":"asset","out":{"amount":"0.05","currency":"BTC"},"in":{"amount":"0.05","currency":"BTC"},"createdAt":"2015-03-11T17:00:08.445Z"},{"type":"asset","out":{"amount":"22.0001","currency":"BTC"},"in":{"amount":"0.00","currency":"BTC"},"createdAt":"2015-03-11T17:00:08.441Z"},{"type":"asset","out":{"amount":"22.29","currency":"USD"},"in":{"amount":"0.07565012","currency":"BTC"},"createdAt":"2015-03-11T16:42:38.108Z"},{"type":"liability","out":{"amount":"0.07565012","currency":"BTC"},"in":{"amount":"0.00","currency":"BTC"},"TransactionId":"5ea024f8-5728-48b1-a6d6-b4bc574c2f7e","createdAt":"2015-03-11T16:42:32.052Z"},{"type":"liability","out":{"amount":"22.29","currency":"USD"},"in":{"amount":"0.07565012","currency":"BTC"},"TransactionId":"5ea024f8-5728-48b1-a6d6-b4bc574c2f7e","createdAt":"2015-03-11T16:42:32.051Z"},{"type":"liability","out":{"amount":"15.00","currency":"GBP"},"in":{"amount":"22.29","currency":"USD"},"TransactionId":"5ea024f8-5728-48b1-a6d6-b4bc574c2f7e","createdAt":"2015-03-11T16:42:32.049Z"},{"type":"liability","out":{"amount":"6000.00","currency":"EUR"},"in":{"amount":"6000.00","currency":"EUR"},"TransactionId":"d881428f-f5e1-42cd-bbc6-a503293286e7","createdAt":"2015-03-11T16:36:06.485Z"},{"type":"asset","out":{"amount":"6000.00","currency":"EUR"},"in":{"amount":"6000.00","currency":"EUR"},"createdAt":"2015-03-11T16:36:06.485Z"},{"type":"asset","out":{"amount":"0.67992828","currency":"BTC"},"in":{"amount":"0.00","currency":"BTC"},"createdAt":"2015-03-11T16:29:01.535Z"},{"type":"asset","out":{"amount":"0.082924","currency":"BTC"},"in":{"amount":"0.00","currency":"BTC"},"createdAt":"2015-03-11T16:19:38.928Z"},{"type":"asset","out":{"amount":"147.44","currency":"USD"},"in":{"amount":"0.5002","currency":"BTC"},"createdAt":"2015-03-11T16:08:09.487Z"},{"type":"liability","out":{"amount":"0.5002","currency":"BTC"},"in":{"amount":"0.00","currency":"BTC"},"TransactionId":"76f3c454-364a-4a32-bc59-7ef1b99d0f46","createdAt":"2015-03-11T16:08:04.832Z"},{"type":"liability","out":{"amount":"147.44","currency":"USD"},"in":{"amount":"0.5002","currency":"BTC"},"TransactionId":"76f3c454-364a-4a32-bc59-7ef1b99d0f46","createdAt":"2015-03-11T16:08:04.831Z"},{"type":"asset","out":{"amount":"0.080612","currency":"BTC"},"in":{"amount":"0.00","currency":"BTC"},"createdAt":"2015-03-11T16:07:51.497Z"},{"type":"liability","out":{"amount":"0.00","currency":"BTC"},"in":{"amount":"0.00206286","currency":"BTC"},"TransactionId":"3ab9192a-5dc9-4f12-a14f-c7eca0aaa52c","createdAt":"2015-03-11T16:07:51.483Z"},{"type":"asset","out":{"amount":"0.00","currency":"BTC"},"in":{"amount":"0.00206286","currency":"BTC"},"createdAt":"2015-03-11T16:07:51.483Z"},{"type":"liability","out":{"amount":"0.2","currency":"BTC"},"in":{"amount":"58.48","currency":"USD"},"TransactionId":"85694bac-6056-4dc8-a6a8-1cba0fd753d7","createdAt":"2015-03-11T16:03:43.034Z"},{"type":"asset","out":{"amount":"0.05","currency":"BTC"},"in":{"amount":"14.61","currency":"USD"},"createdAt":"2015-03-11T15:59:32.253Z"},{"type":"liability","out":{"amount":"0.05","currency":"BTC"},"in":{"amount":"14.61","currency":"USD"},"TransactionId":"b4d7de1b-f207-4fdf-b0db-3c01eb39682d","createdAt":"2015-03-11T15:59:28.425Z"},{"type":"asset","out":{"amount":"0.05","currency":"BTC"},"in":{"amount":"14.61","currency":"USD"},"createdAt":"2015-03-11T15:59:01.447Z"},{"type":"liability","out":{"amount":"0.05","currency":"BTC"},"in":{"amount":"14.61","currency":"USD"},"TransactionId":"5dedcec0-4636-4356-9c28-d5979a864193","createdAt":"2015-03-11T15:59:00.967Z"},{"type":"asset","out":{"amount":"0.163719","currency":"BTC"},"in":{"amount":"0.00","currency":"BTC"},"createdAt":"2015-03-11T15:58:48.864Z"},{"type":"asset","out":{"amount":"0.05","currency":"BTC"},"in":{"amount":"14.60","currency":"USD"},"createdAt":"2015-03-11T15:56:29.003Z"},{"type":"liability","out":{"amount":"0.05","currency":"BTC"},"in":{"amount":"14.60","currency":"USD"},"TransactionId":"fe907110-a797-4ff8-8975-77877d809503","createdAt":"2015-03-11T15:56:09.971Z"},{"type":"asset","out":{"amount":"14.75","currency":"USD"},"in":{"amount":"0.05","currency":"BTC"},"createdAt":"2015-03-11T15:54:56.703Z"},{"type":"liability","out":{"amount":"0.05","currency":"BTC"},"in":{"amount":"0.05","currency":"BTC"},"TransactionId":"af24c746-f5d8-4807-aee1-a91640b696f4","createdAt":"2015-03-11T15:54:30.052Z"},{"type":"liability","out":{"amount":"14.75","currency":"USD"},"in":{"amount":"0.05","currency":"BTC"},"TransactionId":"af24c746-f5d8-4807-aee1-a91640b696f4","createdAt":"2015-03-11T15:54:30.051Z"},{"type":"asset","out":{"amount":"14.75","currency":"USD"},"in":{"amount":"0.05","currency":"BTC"},"createdAt":"2015-03-11T15:48:51.126Z"},{"type":"liability","out":{"amount":"0.05","currency":"BTC"},"in":{"amount":"0.05","currency":"BTC"},"TransactionId":"f06d74c5-2597-44af-b10c-8a1d5ce5849d","createdAt":"2015-03-11T15:48:46.435Z"},{"type":"liability","out":{"amount":"14.75","currency":"USD"},"in":{"amount":"0.05","currency":"BTC"},"TransactionId":"f06d74c5-2597-44af-b10c-8a1d5ce5849d","createdAt":"2015-03-11T15:48:46.434Z"},{"type":"asset","out":{"amount":"21.83","currency":"BTC"},"in":{"amount":"6343.60","currency":"USD"},"createdAt":"2015-03-11T15:48:20.314Z"},{"type":"asset","out":{"amount":"0.2389","currency":"BTC"},"in":{"amount":"69.38","currency":"USD"},"createdAt":"2015-03-11T15:48:20.311Z"},{"type":"asset","out":{"amount":"0.37830871","currency":"BTC"},"in":{"amount":"0.00","currency":"BTC"},"createdAt":"2015-03-11T15:48:11.085Z"},{"type":"asset","out":{"amount":"0.06393526","currency":"BTC"},"in":{"amount":"0.00","currency":"BTC"},"createdAt":"2015-03-11T15:48:11.054Z"},{"type":"liability","out":{"amount":"0.00","currency":"BTC"},"in":{"amount":"0.2389","currency":"BTC"},"TransactionId":"dceb1e5d-3cc2-4f7c-a8ef-b0ed7939f163","createdAt":"2015-03-11T15:48:11.050Z"},{"type":"asset","out":{"amount":"0.00","currency":"BTC"},"in":{"amount":"0.2389","currency":"BTC"},"createdAt":"2015-03-11T15:48:11.050Z"},{"type":"asset","out":{"amount":"0.00","currency":"BTC"},"in":{"amount":"50.00","currency":"BTC"},"createdAt":"2015-03-11T15:48:11.047Z"},{"type":"liability","out":{"amount":"0.00","currency":"BTC"},"in":{"amount":"50.00","currency":"BTC"},"TransactionId":"f007ad0e-f482-44df-8efa-a1561cee8d7c","createdAt":"2015-03-11T15:48:11.047Z"},{"type":"liability","out":{"amount":"0.00","currency":"BTC"},"in":{"amount":"21.83","currency":"BTC"},"TransactionId":"1ae86bd0-2c3c-42f9-baf0-92c67b985383","createdAt":"2015-03-11T15:48:11.041Z"},{"type":"asset","out":{"amount":"0.00","currency":"BTC"},"in":{"amount":"21.83","currency":"BTC"},"createdAt":"2015-03-11T15:48:11.041Z"},{"type":"asset","out":{"amount":"14.75","currency":"USD"},"in":{"amount":"0.05","currency":"BTC"},"createdAt":"2015-03-11T15:46:17.917Z"},{"type":"liability","out":{"amount":"0.05","currency":"BTC"},"in":{"amount":"0.05","currency":"BTC"},"TransactionId":"cd6ea33b-c612-446a-b751-001da67e2f93","createdAt":"2015-03-11T15:46:05.540Z"},{"type":"liability","out":{"amount":"14.75","currency":"USD"},"in":{"amount":"0.05","currency":"BTC"},"TransactionId":"cd6ea33b-c612-446a-b751-001da67e2f93","createdAt":"2015-03-11T15:46:05.539Z"}]'
+    http_version: 
+  recorded_at: Wed, 11 Mar 2015 17:02:48 GMT
+recorded_with: VCR 2.9.3
