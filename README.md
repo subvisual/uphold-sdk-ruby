@@ -99,11 +99,20 @@ Bitreserve's API.
 
 ### OAuth2
 
-**NOT SUPPORTED YET**
+**NOT SUPPORTED BY BITRESERVE YET**
 
 ### Basic Authentication
 
-TODO
+[*Bireserve documentation on basic authentication*](https://developer.bitreserve.org/api/v0/#basic-authentication)
+
+```ruby
+client.generate_access_token(username: 'your-bitreserve-username', password:
+'your-bitreserve-password', otp: 'a-valid-bitreserve-otp')
+```
+
+To generate a valid OTP you can install [Authy](https://www.authy.com/), follow
+it's set up process and choose bitreserve. You should be prompted with a set of
+numbers, which is your OTP (it only lasts 30 seconds, so you have to be quick).
 
 ## Tickers
 
