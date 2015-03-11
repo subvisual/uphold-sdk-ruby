@@ -108,9 +108,9 @@ Bitreserve's API.
 
 [*Bireserve documentation on basic authentication*](https://developer.bitreserve.org/api/v0/#basic-authentication)
 
-The only thing you need to use basic authentication is a Personal Access Token,
-everything else is transparent to you. If you already have a token, see how to
-use it [here](#personal-access-token).
+The only thing you need, in order to use basic authentication is a Personal
+Access Token, everything else is transparent to you. If you already have a
+token, see how to use it [here](#personal-access-token).
 
 ```ruby
 client.generate_access_token(username: 'your-bitreserve-username', password:
