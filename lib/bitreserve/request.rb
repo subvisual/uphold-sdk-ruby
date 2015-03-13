@@ -44,10 +44,12 @@ module Bitreserve
     attr_reader :path, :data, :auth, :headers
 
     def self.with_valid_response(response)
-      if response.is_a?(Hash) && response['error']
-        Entities::Error.new(response)
+      return yield unless response.code >= 400
+
+      if response['error_description']
+        Entities::OAuthError.new(response)
       else
-        yield
+        Entities::Error.new(response)
       end
     end
 

@@ -58,15 +58,26 @@ module Bitreserve
         expect(Request).to have_received(:get).with(url, headers: headers, body: body)
       end
 
-      it 'handles an error response' do
-        fake_error = { code: '401', error: 'message' }
+      it 'handles an auth error response' do
+        fake_error = { code: '401', error: 'invalid_token', error_description: 'A description' }
         request_data = RequestData.new('/some-url', object_class)
-        WebMockHelpers.bitreserve_stub_request(:get, '/some-url', fake_error)
+        WebMockHelpers.bitreserve_stub_request(:get, '/some-url', fake_error, status: 401)
+
+        result = Request.public_send(method_name, :get, request_data)
+
+        expect(result).to be_a(Entities::OAuthError)
+        expect(result.code).to eq '401'
+      end
+
+      it 'handles an error response' do
+        fake_error = { code: '400', errors: {} }
+        request_data = RequestData.new('/some-url', object_class)
+        WebMockHelpers.bitreserve_stub_request(:get, '/some-url', fake_error, status: 400)
 
         result = Request.public_send(method_name, :get, request_data)
 
         expect(result).to be_a(Entities::Error)
-        expect(result.code).to eq '401'
+        expect(result.code).to eq '400'
       end
     end
 

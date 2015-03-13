@@ -2,8 +2,7 @@ module Bitreserve
   module Entities
     class Error < BaseEntity
       attribute :code
-      attribute :error
-      attribute :error_description
+      attribute :errors
     end
   end
 end
