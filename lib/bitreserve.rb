@@ -5,18 +5,26 @@ require 'virtus'
 Dotenv.load
 
 require 'bitreserve/version'
+require 'bitreserve/options'
 require 'bitreserve/client'
 
 module Bitreserve
-  API_BASE = 'https://api.bitreserve.org'
   ROOT_PATH = File.dirname(__FILE__)
 
-  @api_base = API_BASE
+  @api_base = Options::API_BASE
   @api_version = 0
   @logger = Logger.new(STDOUT)
 
   class << self
     attr_accessor :api_base, :api_version, :logger
+
+    def sandbox=(value)
+      self.api_base = if value
+                        Options::SANDBOX_API_BASE
+                      else
+                        Options::API_BASE
+                      end
+    end
   end
 end
 

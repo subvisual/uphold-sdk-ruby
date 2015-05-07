@@ -19,5 +19,15 @@ module Bitreserve
         expect(client.bearer_token).to eq token
       end
     end
+
+    it 'uses the production api by default' do
+      Bitreserve.sandbox = false
+      expect(Bitreserve.api_base).to eq Bitreserve::Options::API_BASE
+    end
+
+    it 'uses the sandbox api when asked to' do
+      Bitreserve.sandbox = true
+      expect(Bitreserve.api_base).to eq Bitreserve::Options::SANDBOX_API_BASE
+    end
   end
 end

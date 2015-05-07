@@ -26,6 +26,7 @@ Or install it yourself as:
 # Contents
 
 * [Usage](#usage)
+* [Options](#options)
 * [Creating an authenticated client](#creating-an-authenticated-client)
   * [Personal Access Token](#personal-access-token)
     * [Via argument](#via-argument)
@@ -55,6 +56,26 @@ require 'bitreserve'
 
 client = Bitreserve::Client.new
 puts client.all_tickers
+```
+
+## Sandbox mode
+
+Bitreserve has a sandbox version for testing purposes:
+
+* Sandbox site: https://sandbox.bitreserve.org
+* Sandbox API: https://api-sandbox.bitreserve.org
+
+You can set `Bitreserve.sandbox = true` to enable sandboxing mode to set the global base URL to point to the sandbox API instead of the production one.
+
+# Options
+
+This is a summary of the supported options when instantiating a new client, and their default values:
+
+```ruby
+Bitreserve::Client.new(
+  # bearer_token for OAuth authentication
+  token: ENV['BITRESERVE_AUTH_TOKEN']
+)
 ```
 
 # Creating an authenticated client
