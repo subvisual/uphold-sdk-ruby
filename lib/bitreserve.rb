@@ -24,6 +24,7 @@ module Bitreserve
                       else
                         Options::API_BASE
                       end
+      Bitreserve::Request.update_base_uri
     end
   end
 end

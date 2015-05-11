@@ -2,8 +2,12 @@ module Bitreserve
   class Request
     class APIError < StandardError; end
 
+    def self.update_base_uri
+      base_uri "#{Bitreserve.api_base}/v#{Bitreserve.api_version}"
+    end
+
     include ::HTTParty
-    base_uri "#{Bitreserve.api_base}/v#{Bitreserve.api_version}"
+    update_base_uri
 
     def self.perform_with_objects(http_method, request_data)
       response = new(request_data).public_send(http_method)
