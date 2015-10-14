@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-module Bitreserve
+module Uphold
   describe Helpers do
     context '.undercored_key' do
       it 'underscores a key correctly' do

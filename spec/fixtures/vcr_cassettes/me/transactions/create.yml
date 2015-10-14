@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api.bitreserve.org/v0/me/cards/a4feff08-2977-40f8-a339-4f546ae5c7e2/transactions
+    uri: https://api.uphold.com/v0/me/cards/a4feff08-2977-40f8-a339-4f546ae5c7e2/transactions
     body:
       encoding: UTF-8
       string: card_id=a4feff08-2977-40f8-a339-4f546ae5c7e2&denomination[currency]=BTC&denomination[amount]=0.0001&destination=a0e20123-47c8-4784-9e71-0defb34d18a7
     headers:
       Authorization:
-      - Bearer <BITRESERVE_AUTH_TOKEN>
+      - Bearer <UPHOLD_AUTH_TOKEN>
   response:
     status:
       code: 202
@@ -26,7 +26,7 @@ http_interactions:
       - keep-alive
       Set-Cookie:
       - __cfduid=d1a4b1ce786bc8db4b5c6c29748ec7a521422451077; expires=Thu, 28-Jan-16
-        13:17:57 GMT; path=/; domain=.bitreserve.org; HttpOnly
+        13:17:57 GMT; path=/; domain=.uphold.com; HttpOnly
       X-Content-Security-Policy:
       - default-src "none"
       Content-Security-Policy:
@@ -41,7 +41,7 @@ http_interactions:
       - nosniff
       X-Frame-Options:
       - DENY
-      X-Bitreserve-Request-Id:
+      X-Uphold-Request-Id:
       - 2e8345c2-eca1-4fa8-ae13-63e029ee064d
       X-Ratelimit-Limit:
       - '300'

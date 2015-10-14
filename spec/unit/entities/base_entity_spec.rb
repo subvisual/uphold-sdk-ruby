@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-module Bitreserve
+module Uphold
   module Entities
     describe BaseEntity do
       class MockEntity < BaseEntity

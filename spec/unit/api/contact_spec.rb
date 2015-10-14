@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-module Bitreserve
+module Uphold
   module API
     describe Card do
-      let(:client) { Bitreserve::Client.new }
+      let(:client) { Uphold::Client.new }
 
       context '#all_contacts' do
         it 'gets all the contacts' do
@@ -39,7 +39,7 @@ module Bitreserve
             company: 'company-name',
             addresses: ['fake-address-1', 'fake-address-2']
           }
-          request_data = RequestData.new(Endpoints::USER_CONTACTS, Entities::Contact, client.authorization_header, Bitreserve::Helpers.camelized_hash(data))
+          request_data = RequestData.new(Endpoints::USER_CONTACTS, Entities::Contact, client.authorization_header, Uphold::Helpers.camelized_hash(data))
           allow(Request).to receive(:perform_with_object)
 
           client.create_contact(data)

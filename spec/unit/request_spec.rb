@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-module Bitreserve
+module Uphold
   shared_examples 'perform request method' do |method_name|
     let(:object_class) { double('ObjectClass', new: nil, from_collection: nil) }
     let(:response) { double('Response', code: 200, parsed_response: '', headers: {}) }
@@ -26,7 +26,7 @@ module Bitreserve
 
       it 'makes the actual GET call' do
         url = '/some-url'
-        WebMockHelpers.bitreserve_stub_request(:get, url)
+        WebMockHelpers.uphold_stub_request(:get, url)
         allow(Request).to receive(:get).and_call_original
 
         Request.public_send(method_name, :get, request_data(url, client))
@@ -37,7 +37,7 @@ module Bitreserve
       it 'makes the actual POST call' do
         url = '/some-url'
         data = { key: 'value' }
-        WebMockHelpers.bitreserve_stub_request(:post, url)
+        WebMockHelpers.uphold_stub_request(:post, url)
         allow(Request).to receive(:post).and_call_original
 
         Request.public_send(method_name, :post, request_data(url, client, data))
@@ -50,7 +50,7 @@ module Bitreserve
         headers = { header1: 'I am a header' }
         body = { description: 'whatever' }
         request_data = RequestData.new(url, object_class, headers, body)
-        WebMockHelpers.bitreserve_stub_request(:get, url)
+        WebMockHelpers.uphold_stub_request(:get, url)
         allow(Request).to receive(:get).and_call_original
 
         Request.public_send(method_name, :get, request_data)
@@ -61,7 +61,7 @@ module Bitreserve
       it 'handles an auth error response' do
         fake_error = { code: '401', error: 'invalid_token', error_description: 'A description' }
         request_data = RequestData.new('/some-url', object_class)
-        WebMockHelpers.bitreserve_stub_request(:get, '/some-url', fake_error, status: 401)
+        WebMockHelpers.uphold_stub_request(:get, '/some-url', fake_error, status: 401)
 
         result = Request.public_send(method_name, :get, request_data)
 
@@ -72,7 +72,7 @@ module Bitreserve
       it 'handles an error response' do
         fake_error = { code: '400', errors: {} }
         request_data = RequestData.new('/some-url', object_class)
-        WebMockHelpers.bitreserve_stub_request(:get, '/some-url', fake_error, status: 400)
+        WebMockHelpers.uphold_stub_request(:get, '/some-url', fake_error, status: 400)
 
         result = Request.public_send(method_name, :get, request_data)
 

@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-module Bitreserve
+module Uphold
   module API
     describe PublicTransaction do
-      let(:client) { Bitreserve::Client.new }
+      let(:client) { Uphold::Client.new }
 
       context '#all_public_transactions' do
         it 'gets all public transactions' do

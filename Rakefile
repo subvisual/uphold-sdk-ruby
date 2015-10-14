@@ -6,7 +6,7 @@ RSpec::Core::RakeTask.new(:spec)
 
 task :console do
   require 'pry'
-  require 'bitreserve'
+  require 'uphold'
   ARGV.clear
   Pry.start
 end

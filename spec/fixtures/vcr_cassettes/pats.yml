@@ -2,12 +2,12 @@
 http_interactions:
 - request:
     method: post
-    uri: https://example:Password123@api.bitreserve.org/v0/me/tokens
+    uri: https://example:Password123@api.uphold.com/v0/me/tokens
     body:
       encoding: UTF-8
-      string: description=Bitreserve%20ruby
+      string: description=Uphold%20ruby
     headers:
-      X-Bitreserve-Otp:
+      X-Uphold-Otp:
       - '5960110'
   response:
     status:
@@ -26,7 +26,7 @@ http_interactions:
       - keep-alive
       Set-Cookie:
       - __cfduid=d8a73547e05f107f8c796bfcc238d8f851422548652; expires=Fri, 29-Jan-16
-        16:24:12 GMT; path=/; domain=.bitreserve.org; HttpOnly
+        16:24:12 GMT; path=/; domain=.uphold.com; HttpOnly
       X-Content-Security-Policy:
       - default-src "none"
       Content-Security-Policy:
@@ -42,7 +42,7 @@ http_interactions:
       - nosniff
       X-Frame-Options:
       - DENY
-      X-Bitreserve-Request-Id:
+      X-Uphold-Request-Id:
       - 9eed6cc1-c6f3-43ac-9acf-9286a83935c7
       X-Ratelimit-Limit:
       - '300'
@@ -54,7 +54,7 @@ http_interactions:
       - 1b06c7540a6e0ddb-MAD
     body:
       encoding: UTF-8
-      string: '{"access_token":"853d580429364a90a6e02cb1f89e257a58da9064","description":"Bitreserve
+      string: '{"access_token":"853d580429364a90a6e02cb1f89e257a58da9064","description":"Uphold
         ruby","expires":null}'
     http_version: 
   recorded_at: Thu, 29 Jan 2015 16:24:14 GMT

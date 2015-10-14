@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-module Bitreserve
+module Uphold
   module API
     describe AuthToken do
       let(:client) { Client.new }

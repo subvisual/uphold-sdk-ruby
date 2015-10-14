@@ -17,3 +17,4 @@ tags
 .tags
 path
 .ruby-version
+*.gem

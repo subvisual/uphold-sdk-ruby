@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-module Bitreserve
+module Uphold
   module API
     describe Contact do
-      let(:client) { Bitreserve::Client.new }
+      let(:client) { Uphold::Client.new }
 
       context '#all_contacts' do
         it 'gets all the contacts' do

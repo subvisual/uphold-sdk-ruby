@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.bitreserve.org/v0/reserve/statistics
+    uri: https://api.uphold.com/v0/reserve/statistics
     body:
       encoding: US-ASCII
       string: ''
     headers:
       Authorization:
-      - Bearer <BITRESERVE_AUTH_TOKEN>
+      - Bearer <UPHOLD_AUTH_TOKEN>
   response:
     status:
       code: 200
@@ -26,7 +26,7 @@ http_interactions:
       - keep-alive
       Set-Cookie:
       - __cfduid=d7978a65b9f913d33a9c44a2636303f921422381205; expires=Wed, 27-Jan-16
-        17:53:25 GMT; path=/; domain=.bitreserve.org; HttpOnly
+        17:53:25 GMT; path=/; domain=.uphold.com; HttpOnly
       X-Content-Security-Policy:
       - default-src "none"
       Content-Security-Policy:
@@ -42,7 +42,7 @@ http_interactions:
       - nosniff
       X-Frame-Options:
       - DENY
-      X-Bitreserve-Request-Id:
+      X-Uphold-Request-Id:
       - 96f0ec67-bab8-4d0c-af23-ee44c83d9f68
       X-Ratelimit-Limit:
       - '300'

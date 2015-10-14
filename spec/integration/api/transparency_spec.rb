@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-module Bitreserve
+module Uphold
   module API
     describe Transparency do
-      let(:client) { Bitreserve::Client.new }
+      let(:client) { Uphold::Client.new }
 
       context '#statistics' do
         it 'gets all the tickers' do

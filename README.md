@@ -1,18 +1,18 @@
-# Bitreserve
+# Uphold
 
-[![Gem Version](https://badge.fury.io/rb/bitreserve.svg)](http://badge.fury.io/rb/bitreserve)
-[![Build Status](https://travis-ci.org/groupbuddies/bitreserve.svg?branch=master)](https://travis-ci.org/groupbuddies/bitreserve)
-[![Code Climate](https://codeclimate.com/github/groupbuddies/bitreserve/badges/gpa.svg)](https://codeclimate.com/github/groupbuddies/bitreserve)
-[![Test Coverage](https://codeclimate.com/github/groupbuddies/bitreserve/badges/coverage.svg)](https://codeclimate.com/github/groupbuddies/bitreserve)
+[![Gem Version](https://badge.fury.io/rb/uphold-ruby.svg)](http://badge.fury.io/rb/uphold)
+[![Build Status](https://travis-ci.org/subvisual/uphold-ruby.svg?branch=master)](https://travis-ci.org/subvisual/uphold-ruby)
+[![Code Climate](https://codeclimate.com/github/subvisual/uphold-ruby/badges/gpa.svg)](https://codeclimate.com/github/subvisual/uphold-ruby)
+[![Test Coverage](https://codeclimate.com/github/subvisual/uphold-ruby/badges/coverage.svg)](https://codeclimate.com/github/subvisual/uphold-ruby)
 
-A ruby client for the [Bitreserve](https://bitreserve.org/) API.
+A ruby client for the [Uphold](https://uphold.com/) API.
 
 # Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'bitreserve'
+gem 'uphold'
 ```
 
 And then execute:
@@ -21,7 +21,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install bitreserve
+    $ gem install uphold
 
 # Contents
 
@@ -52,29 +52,29 @@ Or install it yourself as:
 To use the gem, you have to instantiate a client. All API calls are made from there. Here's a minimal working example:
 
 ```ruby
-require 'bitreserve'
+require 'uphold'
 
-client = Bitreserve::Client.new
+client = Uphold::Client.new
 puts client.all_tickers
 ```
 
 ## Sandbox mode
 
-Bitreserve has a sandbox version for testing purposes:
+Uphold has a sandbox version for testing purposes:
 
-* Sandbox site: https://sandbox.bitreserve.org
-* Sandbox API: https://api-sandbox.bitreserve.org
+* Sandbox site: https://sandbox.uphold.com
+* Sandbox API: https://api-sandbox.uphold.com
 
-You can set `Bitreserve.sandbox = true` to enable sandboxing mode to set the global base URL to point to the sandbox API instead of the production one.
+You can set `Uphold.sandbox = true` to enable sandboxing mode to set the global base URL to point to the sandbox API instead of the production one.
 
 # Options
 
 This is a summary of the supported options when instantiating a new client, and their default values:
 
 ```ruby
-Bitreserve::Client.new(
+Uphold::Client.new(
   # bearer_token for OAuth authentication
-  token: ENV['BITRESERVE_AUTH_TOKEN']
+  token: ENV['UPHOLD_AUTH_TOKEN']
 )
 ```
 
@@ -96,7 +96,7 @@ or by passing it when instantiating the client.
 Pass the token to the constructor:
 
 ```ruby
-Bitreserve::Client.new(token: 'your-access-token')
+Uphold::Client.new(token: 'your-access-token')
 ```
 
 ### Via environment variable
@@ -104,56 +104,56 @@ Bitreserve::Client.new(token: 'your-access-token')
 Set the environment variable using [dotenv](https://github.com/bkeepers/dotenv), or by exporting it in your shell:
 
 ```bash
-$ export BITRESERVE_AUTH_TOKEN="your-access-token"
+$ export UPHOLD_AUTH_TOKEN="your-access-token"
 ```
 
 Then instantiate the client:
 
 ```ruby
-Bitreserve::Client.new
+Uphold::Client.new
 ```
 
 # Endpoints
 
 This is a comprehensive list of all the mappings between this wrapper and the
-Bitreserve's API.
+Uphold's API.
 
 ## Authentication
 
-[*Bitreserve documentation on authentication*](https://developer.bitreserve.org/api/v0/#authentication)
+[*Uphold documentation on authentication*](https://developer.uphold.com/api/v0/#authentication)
 
 ### OAuth2
 
-**NOT SUPPORTED BY BITRESERVE YET**
+**NOT SUPPORTED BY UPHOLD YET**
 
 ### Basic Authentication
 
-[*Bireserve documentation on basic authentication*](https://developer.bitreserve.org/api/v0/#basic-authentication)
+[*Bireserve documentation on basic authentication*](https://developer.uphold.com/api/v0/#basic-authentication)
 
 The only thing you need, in order to use basic authentication is a Personal
 Access Token, everything else is transparent to you. If you already have a
 token, see how to use it [here](#personal-access-token).
 
 ```ruby
-client.generate_access_token(username: 'your-bitreserve-username', password:
-'your-bitreserve-password', otp: 'a-valid-bitreserve-otp')
+client.generate_access_token(username: 'your-uphold-username', password:
+'your-uphold-password', otp: 'a-valid-uphold-otp')
 ```
 
 To generate a valid OTP you can install [Authy](https://www.authy.com/), follow
-it's set up process and choose bitreserve. You should be prompted with a set of
+it's set up process and choose uphold. You should be prompted with a set of
 numbers, which is your OTP (it only lasts 30 seconds, so you have to be quick).
 
 ## Tickers
 
-[*Bitreserve documentation on tickers*](https://developer.bitreserve.org/api/v0/#tickers)
+[*Uphold documentation on tickers*](https://developer.uphold.com/api/v0/#tickers)
 
-**Return the current rates on Bitreserve for all currency pairs:**
+**Return the current rates on Uphold for all currency pairs:**
 
 ```ruby
 client.all_tickers
 ```
 
-**Return the current rates on Bitreserve for a specific currency:**
+**Return the current rates on Uphold for a specific currency:**
 
 ```ruby
 client.find_ticker(currency: 'EUR')
@@ -161,7 +161,7 @@ client.find_ticker(currency: 'EUR')
 
 ## Cards
 
-[*Bitreserve documentation on cards*](https://developer.bitreserve.org/api/v0/#cards)
+[*Uphold documentation on cards*](https://developer.uphold.com/api/v0/#cards)
 
 **Return all the user's cards:**
 
@@ -183,7 +183,7 @@ client.create_card(label: 'My label', currency: 'BTC')
 
 ## Transactions
 
-[*Bitreserve documentation on transactions*](https://developer.bitreserve.org/api/v0/#transactions)
+[*Uphold documentation on transactions*](https://developer.uphold.com/api/v0/#transactions)
 
 You can interact with both the authenticated user's and public transactions.
 
@@ -248,7 +248,7 @@ client.all_card_transactions
 
 ## Contacts
 
-[*Bitreserve documentation on contacts*](https://developer.bitreserve.org/api/v0/#contacts)
+[*Uphold documentation on contacts*](https://developer.uphold.com/api/v0/#contacts)
 
 **Return all the user's contacts:**
 
@@ -271,7 +271,7 @@ Moisture Farm Inc', emails: ['support@larsmoisturefarm.com')
 
 ## Users
 
-[*Bitreserve documentation on users*](https://developer.bitreserve.org/api/v0/#users)
+[*Uphold documentation on users*](https://developer.uphold.com/api/v0/#users)
 
 **Return the details of the user:**
 
@@ -287,7 +287,7 @@ client.phones
 
 ## Transparency
 
-[*Bitreserve documentation on the reserve status*](https://developer.bitreserve.org/api/v0/#reserve-status)
+[*Uphold documentation on the reserve status*](https://developer.uphold.com/api/v0/#reserve-status)
 
 **Return a summary of all obligations and assets:**
 
@@ -295,7 +295,7 @@ client.phones
 client.statistics
 ```
 
-[*Bitreserve documentation on the reserve ledger*](https://developer.bitreserve.org/api/v0/#the-reserveledger)
+[*Uphold documentation on the reserve ledger*](https://developer.uphold.com/api/v0/#the-reserveledger)
 
 **Return a detailed record of all obligations and assets flowing into the
 network:**
@@ -306,17 +306,17 @@ client.ledger
 
 ## Pagination
 
-[*Bitreserve documentation on pagination*](https://developer.bitreserve.org/api/v0/#pagination)
+[*Uphold documentation on pagination*](https://developer.uphold.com/api/v0/#pagination)
 
 All endpoints that support pagination take a `range` attribute, in which you can
 specify the first and last indexes for the items you wish to retrieve.
 
 The response will look exactly like an `Array`, but with a method called
 `total_items`, that returns the total number of items of that type that
-Bitreserve knows of.
+Uphold knows of.
 
 ```ruby
-client = Bitreserve::Client.new token: 'XXX'
+client = Uphold::Client.new token: 'XXX'
 client.all_public_transactions.size # 5
 client.all_public_transactions.total_size # 21110
 client.all_public_transactions(range: (5..20)).size # 16
@@ -324,7 +324,7 @@ client.all_public_transactions(range: (5..20)).size # 16
 
 # Contributing
 
-1. Fork it ( https://github.com/groupbuddies/bitreserve/fork )
+1. Fork it ( https://github.com/subvisual/uphold-ruby/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 4. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)

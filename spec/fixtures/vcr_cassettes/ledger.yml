@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.bitreserve.org/v0/reserve/ledger
+    uri: https://api.uphold.com/v0/reserve/ledger
     body:
       encoding: US-ASCII
       string: ''
     headers:
       Authorization:
-      - Bearer <BITRESERVE_AUTH_TOKEN>
+      - Bearer <UPHOLD_AUTH_TOKEN>
   response:
     status:
       code: 200
@@ -38,7 +38,7 @@ http_interactions:
       - nosniff
       X-Frame-Options:
       - DENY
-      X-Bitreserve-Request-Id:
+      X-Uphold-Request-Id:
       - fe6c7f3b-e8ce-4151-a39a-ac8b92913522
       X-Ratelimit-Limit:
       - '300'

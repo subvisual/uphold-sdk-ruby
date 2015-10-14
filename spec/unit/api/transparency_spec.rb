@@ -1,12 +1,12 @@
 require 'spec_helper'
 
-module Bitreserve
+module Uphold
   module API
     describe Transparency do
       let(:client) { Client.new }
 
       context '#statistics' do
-        it 'gets all the bitreserve reserve stats' do
+        it 'gets all the uphold reserve stats' do
           request_data = RequestData.new(Endpoints::STATS, Entities::Asset, client.authorization_header)
           allow(Request).to receive(:perform_with_objects)
 
@@ -18,7 +18,7 @@ module Bitreserve
       end
 
       context '#ledger' do
-        it 'gets all the bitreserve reserve stats' do
+        it 'gets all the uphold reserve stats' do
           request_data = RequestData.new(Endpoints::LEDGER, Entities::LedgerEntry, client.authorization_header)
           allow(Request).to receive(:perform_with_objects)
 

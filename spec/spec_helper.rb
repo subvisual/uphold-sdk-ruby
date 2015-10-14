@@ -3,17 +3,17 @@ if ENV['CI']
   CodeClimate::TestReporter.start
 end
 
-require 'bitreserve'
+require 'uphold'
 require 'climate_control'
 require 'pry'
 
-Dir[File.join(Bitreserve::ROOT_PATH, '..', 'spec/support/**/*.rb')].each { |f| require f }
+Dir[File.join(Uphold::ROOT_PATH, '..', 'spec/support/**/*.rb')].each { |f| require f }
 
 class DummyLogger
   def self.info(_message); end
   def self.debug(_message); end
 end
-Bitreserve.logger = DummyLogger
+Uphold.logger = DummyLogger
 
 def with_modified_env(options, &block)
   ClimateControl.modify(options, &block)

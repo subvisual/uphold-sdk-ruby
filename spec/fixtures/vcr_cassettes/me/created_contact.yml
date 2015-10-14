@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api.bitreserve.org/v0/me/contacts
+    uri: https://api.uphold.com/v0/me/contacts
     body:
       encoding: UTF-8
       string: firstName=first-name&lastName=last-name&emails[]=fake%40email.com&company=company-name
     headers:
       Authorization:
-      - Bearer <BITRESERVE_AUTH_TOKEN>
+      - Bearer <UPHOLD_AUTH_TOKEN>
   response:
     status:
       code: 200
@@ -26,7 +26,7 @@ http_interactions:
       - keep-alive
       Set-Cookie:
       - __cfduid=d872e6b02659cad8e480ae5aeac6d04ad1422378339; expires=Wed, 27-Jan-16
-        17:05:39 GMT; path=/; domain=.bitreserve.org; HttpOnly
+        17:05:39 GMT; path=/; domain=.uphold.com; HttpOnly
       X-Content-Security-Policy:
       - default-src "none"
       Content-Security-Policy:
@@ -42,7 +42,7 @@ http_interactions:
       - nosniff
       X-Frame-Options:
       - DENY
-      X-Bitreserve-Request-Id:
+      X-Uphold-Request-Id:
       - 8862a788-7e9b-4553-b816-41cfaecf515a
       X-Ratelimit-Limit:
       - '300'

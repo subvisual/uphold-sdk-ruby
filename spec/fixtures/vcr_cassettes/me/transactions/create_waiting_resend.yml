@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api.bitreserve.org/v0/me/cards/a4feff08-2977-40f8-a339-4f546ae5c7e2/transactions
+    uri: https://api.uphold.com/v0/me/cards/a4feff08-2977-40f8-a339-4f546ae5c7e2/transactions
     body:
       encoding: UTF-8
       string: card_id=a4feff08-2977-40f8-a339-4f546ae5c7e2&denomination[currency]=BTC&denomination[amount]=0.0001&destination=non-user%40example.com
     headers:
       Authorization:
-      - Bearer <BITRESERVE_AUTH_TOKEN>
+      - Bearer <UPHOLD_AUTH_TOKEN>
   response:
     status:
       code: 202
@@ -26,7 +26,7 @@ http_interactions:
       - keep-alive
       Set-Cookie:
       - __cfduid=d0c036385bf8100a24d7290d0a3cc2eaa1422451099; expires=Thu, 28-Jan-16
-        13:18:19 GMT; path=/; domain=.bitreserve.org; HttpOnly
+        13:18:19 GMT; path=/; domain=.uphold.com; HttpOnly
       X-Content-Security-Policy:
       - default-src "none"
       Content-Security-Policy:
@@ -41,7 +41,7 @@ http_interactions:
       - nosniff
       X-Frame-Options:
       - DENY
-      X-Bitreserve-Request-Id:
+      X-Uphold-Request-Id:
       - 8e801f74-94db-4e19-b2f9-08aba033d494
       X-Ratelimit-Limit:
       - '300'
@@ -59,13 +59,13 @@ http_interactions:
   recorded_at: Wed, 28 Jan 2015 13:18:21 GMT
 - request:
     method: post
-    uri: https://api.bitreserve.org/v0/me/cards/a4feff08-2977-40f8-a339-4f546ae5c7e2/transactions/7125d576-9a48-4631-9ef4-d281620bb2a6/commit
+    uri: https://api.uphold.com/v0/me/cards/a4feff08-2977-40f8-a339-4f546ae5c7e2/transactions/7125d576-9a48-4631-9ef4-d281620bb2a6/commit
     body:
       encoding: UTF-8
       string: ''
     headers:
       Authorization:
-      - Bearer <BITRESERVE_AUTH_TOKEN>
+      - Bearer <UPHOLD_AUTH_TOKEN>
   response:
     status:
       code: 200
@@ -83,7 +83,7 @@ http_interactions:
       - keep-alive
       Set-Cookie:
       - __cfduid=dea767ae8a8d99cfb760debf6568d66a01422451099; expires=Thu, 28-Jan-16
-        13:18:19 GMT; path=/; domain=.bitreserve.org; HttpOnly
+        13:18:19 GMT; path=/; domain=.uphold.com; HttpOnly
       X-Content-Security-Policy:
       - default-src "none"
       Content-Security-Policy:
@@ -99,7 +99,7 @@ http_interactions:
       - nosniff
       X-Frame-Options:
       - DENY
-      X-Bitreserve-Request-Id:
+      X-Uphold-Request-Id:
       - 6b143233-16bb-4369-9b2d-98becfddba2a
       X-Ratelimit-Limit:
       - '300'
