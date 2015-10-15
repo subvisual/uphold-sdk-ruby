@@ -1,9 +1,9 @@
 # Uphold
 
 [![Gem Version](https://badge.fury.io/rb/uphold-ruby.svg)](http://badge.fury.io/rb/uphold)
-[![Build Status](https://travis-ci.org/subvisual/uphold-ruby.svg?branch=master)](https://travis-ci.org/subvisual/uphold-ruby)
-[![Code Climate](https://codeclimate.com/github/subvisual/uphold-ruby/badges/gpa.svg)](https://codeclimate.com/github/subvisual/uphold-ruby)
-[![Test Coverage](https://codeclimate.com/github/subvisual/uphold-ruby/badges/coverage.svg)](https://codeclimate.com/github/subvisual/uphold-ruby)
+[![Build Status](https://travis-ci.org/subvisual/uphold-ruby.svg?branch=master)](https://travis-ci.org/subvisual/uphold-sdk-ruby)
+[![Code Climate](https://codeclimate.com/github/subvisual/uphold-ruby/badges/gpa.svg)](https://codeclimate.com/github/subvisual/uphold-sdk-ruby)
+[![Test Coverage](https://codeclimate.com/github/subvisual/uphold-ruby/badges/coverage.svg)](https://codeclimate.com/github/subvisual/uphold-sdk-ruby)
 
 A ruby client for the [Uphold](https://uphold.com/) API.
 
