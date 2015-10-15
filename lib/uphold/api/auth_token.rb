@@ -7,7 +7,11 @@ module Uphold
         request_data = Uphold::RequestData.new(
           Endpoints::AUTH,
           Entities::AuthToken,
-          { 'X-Uphold-OTP' => otp, 'Authorization' => 'Basic ' + Base64.encode64("#{username}:#{password}") },
+          {
+            'X-Uphold-OTP' => otp,
+            'X-Bitreserve-OTP' => otp,
+            'Authorization' => 'Basic ' + Base64.encode64("#{username}:#{password}")
+          },
           description: 'Uphold ruby'
         )
         Request.perform_with_object(:post, request_data)
