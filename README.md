@@ -219,6 +219,13 @@ client.commit_transaction(card_id: 'a6d35fcd-xxxx-9c9d1dda6d57', transaction_id:
 'd51b4e4e-9827-40fb-8763-e0ea2880085b')
 ```
 
+**Create and commit a transaction in a single request:**
+
+```ruby
+client.create_and_commit_transaction(card_id: 'a6d35fcd-xxxx-9c9d1dda6d57', currency:
+'BTC', amount: 0.1, destination: 'foo@bar.com')
+```
+
 **Cancel a transaction:**
 
 ```ruby

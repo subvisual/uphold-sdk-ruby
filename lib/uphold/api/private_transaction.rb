@@ -16,6 +16,16 @@ module Uphold
         Request.perform_with_object(:post, request_data)
       end
 
+      def create_and_commit_transaction(card_id: nil, currency: nil, amount: 0, destination: nil)
+        request_data = RequestData.new(
+          Endpoints.with_placeholders(Endpoints::CREATE_AND_COMMIT_TRANSACTION, ':card' => card_id),
+          Entities::Transaction,
+          authorization_header,
+          card_id: card_id, denomination: { currency: currency, amount: amount }, destination: destination
+        )
+        Request.perform_with_object(:post, request_data)
+      end
+
       def cancel_transaction(card_id: nil, transaction_id: nil)
         request_data = transaction_request_data(Endpoints::CANCEL_TRANSACTION, card_id, transaction_id)
         Request.perform_with_object(:post, request_data)

@@ -41,6 +41,24 @@ module Uphold
         end
       end
 
+      context '#create_and_commit_transaction' do
+        it 'creates a transaction for a specific card' do
+          card_id = '1234'
+          request_data = RequestData.new(
+            Endpoints.with_placeholders(Endpoints::CREATE_AND_COMMIT_TRANSACTION, ':card' => card_id),
+            Entities::Transaction,
+            client.authorization_header,
+            card_id: card_id, denomination: { currency: 'USD', amount: 10 }, destination: 'foo@bar.com'
+          )
+          allow(Request).to receive(:perform_with_object)
+
+          client.create_and_commit_transaction(card_id: card_id, currency: 'USD', amount: 10, destination: 'foo@bar.com')
+
+          expect(Request).to have_received(:perform_with_object).
+            with(:post, request_data)
+        end
+      end
+
       context '#cancel_transaction' do
         it 'cancels a transaction for a specific card' do
           card_id = '1234'
