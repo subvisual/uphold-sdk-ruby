@@ -21,6 +21,20 @@ module Uphold
         end
       end
 
+      context '#error?' do
+        it 'is false for non-error entities' do
+          entity = Uphold::Entities::User.new
+
+          expect(entity.error?).to be_falsey
+        end
+
+        it 'is true for error entities' do
+          entity = Uphold::Entities::Error.new
+
+          expect(entity.error?).to be_truthy
+        end
+      end
+
       context '.from_collection' do
         it 'instantiates each of the entities passed in' do
           entity = double('Entity')

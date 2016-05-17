@@ -14,6 +14,10 @@ module Uphold
         super(Uphold::Helpers.underscored_hash(attributes))
       end
 
+      def error?
+        is_a?(Uphold::Entities::Error)
+      end
+
       class PaginatedCollection < Array
         attr_reader :total_size
 
