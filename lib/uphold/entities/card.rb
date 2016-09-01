@@ -3,7 +3,6 @@ module Uphold
     class Card < BaseEntity
       attribute :id
       attribute :address
-      attribute :addresses
       attribute :label
       attribute :currency
       attribute :balance

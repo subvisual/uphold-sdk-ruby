@@ -55,7 +55,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"id":"d9cfb5ec-27b3-427a-8ee6-084a7c6b5d2a","address":{"bitcoin":"1JbnsnxESsu1bV3DV4DPCSNp15JQ6yCPgC"},"label":"USD
-        card","currency":"USD","balance":"0.00","available":"0.00","lastTransactionAt":null,"position":2,"addresses":[{"id":"1JbnsnxESsu1bV3DV4DPCSNp15JQ6yCPgC","network":"bitcoin"}]}'
+        card","currency":"USD","balance":"0.00","available":"0.00","lastTransactionAt":null,"position":2}'
     http_version: 
   recorded_at: Tue, 27 Jan 2015 14:24:24 GMT
 recorded_with: VCR 2.9.3
