@@ -339,4 +339,4 @@ client.all_public_transactions(range: (5..20)).size # 16
 
 # Copyright
 
-Copyright (c) 2015 Group Buddies. See [LICENSE.txt](LICENSE.txt) for further details.
+Copyright (c) 2019 Subvisual. See [LICENSE.txt](LICENSE.txt) for further details.

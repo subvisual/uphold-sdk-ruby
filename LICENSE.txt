@@ -1,4 +1,4 @@
-Copyright (c) 2015 Group Buddies
+Copyright (c) 2019 Subvisual
 
 MIT License
 
