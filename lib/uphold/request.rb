@@ -13,7 +13,7 @@ module Uphold
       response = new(request_data).public_send(http_method)
 
       with_valid_response(response) do
-        request_data.entity.from_collection(response.parsed_response, response.headers['content-range'])
+        request_data.entity.from_collection(response.parsed_response.to_h, response.headers['content-range'])
       end
     end
 
