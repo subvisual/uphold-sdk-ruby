@@ -5,7 +5,7 @@ module Uphold
 
       def self.from_collection(entities, content_range)
         total_size = (content_range && content_range.split('/')[1]) || entities.size
-        items = entities.map { |entity| new(entity) }
+        items = entities.map { |entity| new(entity.to_h) }
 
         PaginatedCollection.new(items, total_size)
       end
