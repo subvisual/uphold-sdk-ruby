@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Uphold
   class Request
     class APIError < StandardError; end
@@ -56,6 +58,7 @@ module Uphold
         Entities::Error.new(response)
       end
     end
+    private_class_method :with_valid_response
 
     def options
       { body: data, headers: headers }.

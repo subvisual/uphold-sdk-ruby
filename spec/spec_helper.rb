@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 if ENV['CI']
   require 'codeclimate-test-reporter'
   CodeClimate::TestReporter.start
@@ -11,6 +13,7 @@ Dir[File.join(Uphold::ROOT_PATH, '..', 'spec/support/**/*.rb')].each { |f| requi
 
 class DummyLogger
   def self.info(_message); end
+
   def self.debug(_message); end
 end
 Uphold.logger = DummyLogger

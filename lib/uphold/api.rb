@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'uphold/api/auth_token'
 require 'uphold/api/card'
 require 'uphold/api/contact'

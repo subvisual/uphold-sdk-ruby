@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Uphold
   module Helpers
     def self.underscored_hash(hash)
@@ -17,7 +19,7 @@ module Uphold
     end
 
     def self.camelized_key(key)
-      key.to_s.gsub(/(?:_)([a-z\d]*)/i) { Regexp.last_match[1].capitalize  }.to_sym
+      key.to_s.gsub(/(?:_)([a-z\d]*)/i) { Regexp.last_match[1].capitalize }.to_sym
     end
   end
 end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Uphold
   module Pagination
     def pagination_header_for_range(range)

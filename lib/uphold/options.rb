@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Uphold
   module Options
     attr_reader :options
@@ -9,11 +11,11 @@ module Uphold
     end
 
     def bearer_token
-      @bearer_token ||= (
+      @bearer_token ||= begin
         options[:token] ||
-        ENV['UPHOLD_AUTH_TOKEN'] ||
-        ENV['BITRESERVE_AUTH_TOKEN']
-      )
+          ENV['UPHOLD_AUTH_TOKEN'] ||
+          ENV['BITRESERVE_AUTH_TOKEN']
+      end
     end
 
     def authorization_header

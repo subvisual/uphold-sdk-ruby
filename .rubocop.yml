@@ -1,17 +1,23 @@
-AllCops:
-  Include:
-    - '**/Rakefile'
-    - '**/config.ru'
+inherit_mode:
+  merge:
+    - Exclude
+
+Metrics/BlockLength:
   Exclude:
-    - 'path/**/*'
-    - 'bin/**/*'
-    - 'vendor/**/*'
+    - 'spec/integration/**/*'
+    - 'spec/unit/**/*'
 
 Metrics/LineLength:
   Enabled: false
 
-Style/AlignParameters:
+Layout/AlignParameters:
   EnforcedStyle: with_fixed_indentation
+
+Layout/MultilineOperationIndentation:
+  EnforcedStyle: indented
+
+Layout/DotPosition:
+  EnforcedStyle: trailing
 
 Style/ClassAndModuleChildren:
   Enabled: false
@@ -19,14 +25,5 @@ Style/ClassAndModuleChildren:
 Style/Documentation:
   Enabled: false
 
-Style/DotPosition:
-  EnforcedStyle: trailing
-
 Style/IfUnlessModifier:
   Enabled: false
-
-Style/MultilineOperationIndentation:
-  EnforcedStyle: indented
-
-Style/RegexpLiteral:
-  MaxSlashes: 0

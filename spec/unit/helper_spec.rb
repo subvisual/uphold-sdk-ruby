@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 module Uphold
@@ -22,7 +24,7 @@ module Uphold
       it 'underscores a hash correctly' do
         underscored_hash = Helpers.underscored_hash(firstName: 'name', email: 'email')
 
-        expect(underscored_hash.keys).to match %i(first_name email)
+        expect(underscored_hash.keys).to match %i[first_name email]
       end
     end
 
@@ -30,7 +32,7 @@ module Uphold
       it 'camelizes a hash correctly' do
         camelized_hash = Helpers.camelized_hash(first_name: 'name', email: 'email')
 
-        expect(camelized_hash.keys).to match %i(firstName email)
+        expect(camelized_hash.keys).to match %i[firstName email]
       end
     end
   end
